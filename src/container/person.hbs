@@ -66,8 +66,7 @@
                                             <b>{{team_leader.name}}</b>: 
                                                 {{team_leader.title}}                                 
                                         </div>
-                                        <p><em>{{team_leader.email}}</em></p>
-                                        
+                                        <p><em>{{team_leader.email}}</em></p>                                    
 
 
                                         <ul>
@@ -78,18 +77,14 @@
                                                     {{name}} ({{title}})
                                                 </div>
                                                 <p><em>{{email}}</em></p>
-                                                
-                                                
+
                                                 <ul>
                                                 {{> title data=" Skills: "  big=false }}
                                                     {{#each skills}}
-                                                    <li>
-                                                        {{this}}
-                                                    </li>
+                                                    <li>{{this}}</li>
                                                     {{/each}}
                                                 </ul>
-                                                <br>
-                                                       
+                                                <br>                                                       
                                                 <ul>
                                                     {{> title data=" Projects: "  big=false }}
                                                     <br>
@@ -113,8 +108,7 @@
                                                             {{name}} - ({{title}})
                                                         </li>
                                                         {{/each}}
-                                                       </ul>
-                                                        
+                                                       </ul>                                                        
                                                     </li>
                                                     {{/each}}
                                                 </ul>
