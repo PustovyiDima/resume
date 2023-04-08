@@ -1,0 +1,142 @@
+<div>
+    {{#with person}}
+    <section>
+        <h1>{{name}} ({{age}}) </h1>
+        {{#with address}}
+        <address>{{zip}}, {{city}} ({{state}}),
+            {{street}}, {{country}}
+        </address>
+        {{/with}}
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section>
+        <ul>
+        {{> title data="Educations: "  big=true }}
+            {{#each education}}
+            <li>
+                <div>{{degree}} <i>({{major}})</i> </div>
+                <div><b>{{university}}</b> ({{graduationYear}}) </div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <br>
+    <hr>
+    <br>
+   <section>
+        <ul>
+        {{> title data="Work Experience: "  big=true }}
+            {{#each workExperience}}
+            <li>
+                <div>
+                <em>{{title}}</em>  in <b>{{company}}</b>  ({{startDate}} - {{#if endDate}}
+                     {{endDate}} {{else}} (Працюю зараз) {{/if}})
+                </div>
+                <br>
+                <div><b>{{company}}</b> - <i>{{industry}} company founded in {{year_founded}} year</i></div>
+                <br>
+                <p>
+                    {{responsibilities}}
+                </p>
+                <br>
+                <br>
+                <ul>
+                {{> title data=" Employees: "  big=false }}
+                    {{#each employees}}
+                    <li>
+                        <div>{{name}} <b>({{position}})</b></div>
+                        <div>{{department}} department </div>
+
+                        <ul>
+                           {{> title data=" Projects: "  big=false }}
+                           <br>
+                            {{#each projects}}            
+                            <li>
+                                <div>{{name}} ({{status}})</div>                                
+                                <p>{{description}}</p>
+
+                                <ul>
+                                    {{> title data=" Teams: "  big=false }}
+                                    {{#each teams}}
+                                    <li>
+                                        <div><i>{{team_name}}</i></div>
+                                        <div>
+                                            <b>{{team_leader.name}}</b>: 
+                                                {{team_leader.title}}                                 
+                                        </div>
+                                        <p><em>{{team_leader.email}}</em></p>
+                                        
+
+
+                                        <ul>
+                                            {{> title data=" Team members: "  big=false }}
+                                            {{#each team_members}}
+                                            <li>
+                                                <div>
+                                                    {{name}} ({{title}})
+                                                </div>
+                                                <p><em>{{email}}</em></p>
+                                                
+                                                
+                                                <ul>
+                                                {{> title data=" Skills: "  big=false }}
+                                                    {{#each skills}}
+                                                    <li>
+                                                        {{this}}
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                                <br>
+                                                       
+                                                <ul>
+                                                    {{> title data=" Projects: "  big=false }}
+                                                    <br>
+                                                    {{#each projects}}
+                                                    <li>
+                                                       <div><b>{{name}}</b></div>
+                                                       <p>{{description}}</p>
+                                                       <ul>
+                                                        {{> title data=" Technologies: "  big=false }}
+                                                        {{#each technologies}}
+                                                        <li>
+                                                            {{this}}
+                                                        </li>
+                                                        {{/each}}
+                                                       </ul>
+                                                       <br>
+                                                       <ul>
+                                                        {{> title data=" Team members: "  big=false }}
+                                                        {{#each team_members}}
+                                                        <li>
+                                                            {{name}} - ({{title}})
+                                                        </li>
+                                                        {{/each}}
+                                                       </ul>
+                                                        
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                                <br>
+
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+     {{/with}}
+</div>
+
