@@ -1,0 +1,82 @@
+<div>
+	{{#with main}}
+	<main>
+		<section>
+			{{> title data="Work history" big=true }}
+			<div>
+				<ul>
+					{{#each works}}
+					<li>
+						<div>{{position}}</div>
+
+						<br>
+
+						<div>
+							{{duration.from}}
+							-
+							{{#if duration.to}}
+							{{duration.to}}
+							{{else}}
+							(Досі працюємо)
+							{{/if}}
+						</div>
+
+						<br>
+						{{#if company.url}}
+						{{>link text=company.name href=company.url noLine=true }}
+						{{else}}
+						<b>{{company.name}}</b>
+						{{/if}}
+
+
+
+						<br>
+						<br>
+						<br>
+
+						<div><strong>Projects: ({{projectAmount}})</strong></div>
+
+						<br>
+
+						<ul>
+							{{#each projects}}
+							<li>
+								<div>{{>link text=name href=url noLine=true }}</div>
+								<br>
+								<div>
+									<p>{{about}}</p>
+								</div>
+								<br>
+								<div><em>Project stacks ({{stackAmound}}) </em></div>
+								<br>
+								<div>
+									<ul>
+										{{#each stacks}}
+										<li>{{name}}</li>
+										{{/each}}
+									</ul>
+								</div>
+								<br>
+								<div><em>Project awards</em></div>
+								<br>
+								<div>
+									<ul>
+										{{#each awards}}
+										<li>{{name}}</li>
+										{{/each}}
+
+									</ul>
+								</div>
+							</li>
+							{{/each}}
+						</ul>
+					</li>
+					{{/each}}
+
+				</ul>
+			</div>
+		</section>
+
+	</main>
+	{{/with}}
+</div>
