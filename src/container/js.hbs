@@ -1,0 +1,65 @@
+<main>
+    {{> title data=name big=true}}
+    <br>
+    <div>
+        <p>{{description}}</p>
+    </div>
+    <div>
+        <h3>History:</h3>
+        <p>Founded by {{founder}} in {{year}} year</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        {{> title data="Types:" big=false}}
+        {{> list_this data=types style="badge text-bg-primary"}}
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        {{> title data="Syntax:" big=false}}
+        {{#with syntax}}
+        <ul>
+            <li>
+                <b>variables</b>
+                {{> list_this data=variables}}
+            </li>
+            <li>
+                <b>functions</b>
+                {{> list_this data=functions}}
+            </li>
+            <li>
+                <b>conditionals</b>
+                {{> list_this data=conditionals}}
+            </li>
+            <li>
+                <b>loops</b>
+                {{> list_this data=loops}}
+            </li>
+            <li>
+                <b>classes</b>
+                {{> list_this data=variables}}
+            </li>
+        </ul>
+        {{/with}}
+    </div>
+    <br><hr><br>
+    <div>
+        {{> title data="Features:" big=false}}
+        {{> list_this data=features}}
+    </div>
+    <br><hr><br>
+    <div>
+        {{> title data="Libraries:" big=false}}
+        {{> list_this data=libraries}}
+    </div>
+    <br><hr><br>
+    <div>
+        {{> title data="Tools:" big=false}}
+        {{> list_this data=tools}}
+    </div>
+    <br><hr><br>
+
+</main>
