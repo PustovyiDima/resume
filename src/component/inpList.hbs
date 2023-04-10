@@ -1,0 +1,22 @@
+<div>
+    <ul>
+        {{#each data}}
+        <li>
+            {{#if name}}
+            <div>Name: {{name}} </div>
+            {{/if}}
+            {{#if type}}
+            <div> Type: {{type}} </div>
+            {{/if}}
+            {{#if value}}
+            <div> Value: {{value}} </div>
+            {{/if}}
+            {{#if description}}
+            <div> {{description}} </div>
+            {{/if}}
+        </li>
+        <br>
+        {{/each}}
+    </ul>
+
+</div>
