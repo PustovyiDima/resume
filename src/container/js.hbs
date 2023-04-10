@@ -61,5 +61,14 @@
         {{> list_this data=tools}}
     </div>
     <br><hr><br>
-
+    <div>
+        {{> title data="community:" big=false}}
+        <ul>
+            {{#each community}}
+            <li>                
+                <a href="/">{{name}} ({{type}})</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
 </main>
