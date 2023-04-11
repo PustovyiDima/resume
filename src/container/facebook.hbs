@@ -1,0 +1,35 @@
+<div>
+    <main>
+        <h1>{{name}}</h1>
+        <hr>
+        <br>
+        {{#each users}}
+        <section>
+            {{> title data=name big=true}}
+            <br>
+            {{> textBloks id=id name=false gender=gender age=age }}
+            
+            {{#if friends}}
+            {{> title data="Friends:" big=false}}
+            <br>
+            {{#each friends}}
+            {{> textBloks id=id name=name gender=gender age=age data=mutual_friends dataTitle="mutual friends"}}
+            <br>            
+            {{/each}}
+            
+            {{/if}}
+            
+            {{#if groups}}
+            {{> title data="Groups:" big=false}}
+            {{#each groups}}
+            {{> textBloks id=id name=name description=description data=members dataTitle="members"}}
+            <br>
+            {{/each}}
+            {{/if}}
+        </section>    
+        <br>
+       
+        {{/each}}
+
+    </main>
+</div>
