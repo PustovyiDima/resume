@@ -13,7 +13,12 @@
     <br>
     <div>
         {{> title data="Types:" big=false}}
-        {{> list_this data=types style="badge text-bg-primary"}}
+        <ul>
+            {{#each types}}
+                {{> list_this data=this class="badge text-bg-primary"}}
+            {{/each}}
+        </ul>
+        
     </div>
     <br>
     <hr>
@@ -23,24 +28,46 @@
         {{#with syntax}}
         <ul>
             <li>
-                <b>variables</b>
-                {{> list_this data=variables}}
+                <span class="badge text-bg-secondary"><b>variables</b></span>
+                
+                <ul>
+                    {{#each variables}}
+                        {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
+                
             </li>
             <li>
                 <b>functions</b>
-                {{> list_this data=functions}}
+                <ul>
+                    {{#each functions}}
+                        {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
             </li>
             <li>
                 <b>conditionals</b>
-                {{> list_this data=conditionals}}
+                <ul>
+                    {{#each conditionals}}
+                        {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
             </li>
             <li>
                 <b>loops</b>
-                {{> list_this data=loops}}
+                <ul>
+                    {{#each loops}}
+                        {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
             </li>
             <li>
                 <b>classes</b>
-                {{> list_this data=variables}}
+                <ul>
+                    {{#each classes}}
+                        {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
             </li>
         </ul>
         {{/with}}
@@ -48,17 +75,29 @@
     <br><hr><br>
     <div>
         {{> title data="Features:" big=false}}
-        {{> list_this data=features}}
+        <ul>
+            {{#each features}}
+                {{> list_this data=this class="badge text-bg-primary"}}
+            {{/each}}
+        </ul>
     </div>
     <br><hr><br>
     <div>
         {{> title data="Libraries:" big=false}}
-        {{> list_this data=libraries}}
+        <ul>
+            {{#each libraries}}
+                {{> list_this data=this class="badge text-bg-primary"}}
+            {{/each}}
+        </ul>
     </div>
     <br><hr><br>
     <div>
         {{> title data="Tools:" big=false}}
-        {{> list_this data=tools}}
+       <ul>
+            {{#each tools}}
+                {{> list_this data=this class="badge text-bg-primary"}}
+            {{/each}}
+        </ul>
     </div>
     <br><hr><br>
     <div>
