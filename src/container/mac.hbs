@@ -20,11 +20,11 @@
                 <b>Processor:</b>
             </div>
             <ul>
-                {{> list_item name=brand text="brand"}}
-                {{> list_item name=model text="model"}}
-                {{> list_item name=speed text="speed"}}
-                {{> list_item name=cores text="cores"}}
-                {{> list_item name=cache text="cache"}}                
+                {{> div_item name=brand text="brand" BoldText=true}}
+                {{> div_item name=model text="model"}}
+                {{> div_item name=speed text="speed"}}
+                {{> div_item name=cores text="cores"}}
+                {{> div_item name=cache text="cache"}}                
             </ul>
             {{/with}}
         </section>
@@ -35,9 +35,9 @@
                 <b>Memory:</b>
             </div>
             <ul>
-                {{> list_item name=type text="type"}}
-                {{> list_item name=size text="size"}}
-                {{> list_item name=speed text="speed"}}                
+                {{> div_item name=type text="type"}}
+                {{> div_item name=size text="size"}}
+                {{> div_item name=speed text="speed"}}                
             </ul>
             {{/with}}
         </section>
@@ -48,8 +48,8 @@
                 <b>Storage:</b>
             </div>
             <ul>
-                {{> list_item name=type text="type"}}
-                {{> list_item name=size text="size"}}                              
+                {{> div_item name=type text="type"}}
+                {{> div_item name=size text="size"}}                              
             </ul>
             {{/with}}
         </section>
@@ -60,12 +60,12 @@
                 <b>Display:</b>
             </div>
             <ul>
-                {{> list_item name=size text="size"}}
-                {{> list_item name=resolution text="resolution"}} 
-                {{> list_item name=technology text="technology"}}
-                {{> list_item name=color_space text="color_space"}}                              
-                {{> list_item name=brightness text="brightness"}}
-                {{> list_item name=refresh_rate text="refresh_rate"}} 
+                {{> div_item name=size text="size"}}
+                {{> div_item name=resolution text="resolution"}} 
+                {{> div_item name=technology text="technology"}}
+                {{> div_item name=color_space text="color_space"}}                              
+                {{> div_item name=brightness text="brightness"}}
+                {{> div_item name=refresh_rate text="refresh_rate"}} 
             </ul>
             {{/with}}
         </section>
@@ -76,9 +76,9 @@
                 <b>Graphics:</b>
             </div>
             <ul>
-                {{> list_item name=brand text="brand"}}
-                {{> list_item name=model text="model"}} 
-                {{> list_item name=memory text="memory"}}
+                {{> div_item name=brand text="brand"}}
+                {{> div_item name=model text="model"}} 
+                {{> div_item name=memory text="memory"}}
             </ul>
             {{/with}}
         </section>
@@ -88,14 +88,62 @@
                 <b>Ports:</b>
             </div>
             {{#each ports}}
-                {{> list_item name=type text="type"}}
-                {{> list_item name=count text="count"}}
+                {{> div_item name=type text="Type" BoldName=true}}
+                {{> div_item name=count text="count"}}
                 {{#if features}}
-                {{> list_item name=brand text="brand"}}
+                <ul>
+                    <b>Features:</b>
+                    {{#each features}}
+                        {{> div_item name=this text="" without_colon=true}}
+                    {{/each}}
+                </ul>
                 {{/if}}
             {{/each}}
         </section>
-        
+        <br>
+        <section>
+            {{#with battery}}
+            <div>
+                <b>Battery:</b>
+            </div>
+            <ul>
+                {{> div_item name=type text="type"}}
+                {{> div_item name=capacity text="capacity"}} 
+                {{> div_item name=life text="life"}}
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>            
+            {{> div_item name=weight text="Weight" BoldText=true}}            
+        </section>
+        <br>
+        <section>
+            {{#with dimensions}}
+            <div>
+                <b>Dimensions:</b>
+            </div>
+            <ul>
+                {{> div_item name=height text="height"}}
+                {{> div_item name=width text="width"}} 
+                {{> div_item name=depth text="depth"}}
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>            
+            {{> div_item name=operating_system text="Operating system" BoldText=true}}            
+        </section>
+        <br>
+        <hr>
+        <section>
+            <div>
+                <b>Accessories:</b>
+            </div>
+            {{#each accessories}}            
+                {{> div_item name=price text=name BoldName=true}}
+            {{/each}}
+        </section>
         
         {{/with}}
 
