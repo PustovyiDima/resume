@@ -1,0 +1,121 @@
+<main>
+    {{> title data=name big=true}}
+    <br>
+    <div>
+        <p>{{description}}</p>
+    </div>
+    <div>
+        <h3>History:</h3>
+        <p>Founded by {{history.founder}} in {{history.year}} year</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        {{> title data="Types:" big=false}}
+        <ul>
+            {{#each types}}
+            {{> list_this data=this class="badge text-bg-warning"}}
+            {{/each}}
+        </ul>
+
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        {{> title data="Syntax:" big=false}}
+        {{#with syntax}}
+        <ul>
+            <li>
+                <span class="badge rounded-pill text-bg-secondary"><b>variables : </b></span>
+
+                <ul>
+                    {{#each variables}}
+                    {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
+
+            </li>
+            <li>
+                <span class="badge rounded-pill text-bg-secondary"><b>functions : </b></span>
+                <ul>
+                    {{#each functions}}
+                    {{> list_this data=this class="badge text-bg-light"}}
+                    {{/each}}
+                </ul>
+            </li>
+            <li>
+                <span class="badge rounded-pill text-bg-secondary"><b>conditionals :</b></span>
+                <ul>
+                    {{#each conditionals}}
+                    {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
+            </li>
+            <li>
+                <span class="badge rounded-pill text-bg-secondary"><b>loops: </b></span>
+                <ul>
+                    {{#each loops}}
+                    {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
+            </li>
+            <li>
+                <span class="badge rounded-pill text-bg-secondary"><b>classes: </b></span>
+                <ul>
+                    {{#each classes}}
+                    {{> list_this data=this class="badge text-bg-primary"}}
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+        {{/with}}
+    </div>
+    <br>
+    <hr><br>
+    <div>
+        {{> title data="Features: " big=false}}
+        <ul>
+            {{#each features}}
+            {{> list_this data=this class="badge text-bg-success"}}
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <hr><br>
+    <div>
+        {{> title data="Libraries:" big=false}}
+        <ul>
+            {{#each libraries}}
+            {{> list_this data=this class="badge text-bg-warning"}}
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <hr><br>
+    <div>
+        {{> title data="Tools:" big=false}}
+        <ul>
+            {{#each tools}}
+            {{> list_this data=this class="badge text-bg-primary"}}
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <hr><br>
+    <div>
+        {{> title data="community:" big=false}}
+        <ul>
+            {{#each community}}
+            <li>
+                <button type="button" class="btn btn-light">
+                    <a href="/">{{name}} ({{type}})</a>
+                </button>               
+
+            </li>
+            <br>
+            {{/each}}
+        </ul>
+    </div>
+</main>
