@@ -1,141 +1,166 @@
 <main>
-    <h1>First!</h1>
-    <h2>Second</h2>
-    <h3>Third (3)</h3>
+    <div class="text-bg-light row gy-5">
 
-    <hr>
 
-    <div class="display-1 text-center">First!</div>
-    <div class="display-4 text-end">Second</div>
-    <div class="display-6">Third (3)</div>
+        <section class="col-12">
+            {{!-- card --}}
+            <div class="card text-bg-dark">
+                <img src="https://picsum.photos/800/400" alt="img alt text" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-bg-primary">
+                        Product: #8857
+                    </h5>
+                    <p class="text-bg-secondary">Гантелі для фітнесу Perto 2 шт по 1 кг Зелені</p>
+                    <a href="/summary" class="btn btn-primary">Open</a>
+                </div>
+            </div>
+        </section>
 
-    <hr>
+        <section class="col-3">
+            <div class="card text-bg-dark text-light">
+                <div class="card-header">
+                    <div class="card-title ">
+                        Menu
+                    </div>
+                </div>
+                <ul class="list-group ">
+                    <li class="list-group-item text-bg-light ">
+                        <a href="#" class="btn btn-link  text-dark">Home page</a>
+                    </li>
+                    <li class="list-group-item text-bg-dark">
+                        <a href="#" class="btn btn-link text-light">Skills page</a>
+                    </li>
+                    <li class="list-group-item text-bg-light ">
+                        <a href="#" class="btn btn-link  text-dark">Summary page</a>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <a href="" class="btn btn-dark btn-sm"> Update list</a>
+                </div>
+            </div>
+        </section>
 
-    <div>
-        <span>Просто текст</span>
-        <span class="text-muted">Додатковий текст</span>
+        {{!-- Table --}}
+
+        <section class="col-9">
+            <table class="table table-striped table-bordered text-bg-success">
+                <thead>
+                    <tr>
+                        <th>#id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Jon</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Ivan</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Petr</td>
+                        <td>23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <section class="col-12">
+            <div class="row g-2">
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <div class="card-title">This is title</div>
+                            <p class="">This is content</p>
+                            <button class="btn btn-light">Klick</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            Footer
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <div class="card-title">This is title</div>
+                            <p class="">This is content</p>
+                            <button class="btn btn-light">Klick</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            Footer
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <div class="card-title">This is title</div>
+                            <p class="">This is content</p>
+                            <button class="btn btn-light">Klick</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            Footer
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <div class="card-title">This is title</div>
+                            <p class="">This is content</p>
+                            <button class="btn btn-light">Klick</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            Footer
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <div class="card-title">This is title</div>
+                            <p class="">This is content</p>
+                            <button class="btn btn-light">Klick</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            Footer
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <div class="card-title">This is title</div>
+                            <p class="">This is content</p>
+                            <button class="btn btn-light">Klick</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            Footer
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <hr>
-    <div class="text-uppercase">Text</div>
-    <div class="text-lowercase">Text</div>
-    <div class="text-capitalize">text</div>
-    <hr>
-
-    {{!-- Buttons --}}
-    {{!-- <a href=""></a>
-    <button> </button>
-    <input type="text"> --}}
-
-    <button class="btn">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-primary">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-secondary">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-success">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-danger">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-warning">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-info">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-light">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-dark">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-link">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <a href="#" class="btn btn-link">
-        <span class="text-uppercase">Button</span>
-    </a>
-
-    <hr>
-    <p class="text-primary">My text</p>
-    <p class="text-secondary">My text</p>
-    <p class="text-muted">text muted</p>
-    <p class="text-danger">text danger</p>
-
-    <hr>
-    <button class="btn">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-primary">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-secondary">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-success">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-danger">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-warning">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-info">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-light">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-    <button class="btn btn-outline-dark">
-        <span class="text-uppercase">Button</span>
-    </button>
-
-
-    <hr>
-
-    <div class="card">
-        <div class="card-body">
-            <button class="btn btn-lg btn-outline-dark">
-                <span class="text-uppercase">Button</span>
-            </button>
-            <button class="btn btn-outline-dark">
-                <span class="text-uppercase">Button</span>
-            </button>
-            <button class="btn btn-sm btn-outline-dark">
-                <span class="text-uppercase">Button</span>
-            </button>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="card">
-        <div class="card-body">
-            This some text
-        </div>
-    </div>
 </main>

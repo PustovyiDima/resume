@@ -1,9 +1,10 @@
 html {
-  max-width: 720px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 body {
-  margin: 32px;
+  margin: auto;
   background: #fff;
 }
 

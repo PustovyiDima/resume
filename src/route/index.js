@@ -626,7 +626,6 @@ router.get('/web', function (req, res) {
   })
 })
 
-
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -721,9 +720,8 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-   })
+  })
 })
-
 
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -805,13 +803,12 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
-          },
+        },
       ],
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 router.get('/bootstrap', function (req, res) {
   res.render('bootstrap', {
@@ -942,14 +939,12 @@ router.get('/task21', function (req, res) {
         {
           text: 'Bootstrap',
           url: 'https://getbootstrap.com/',
-
         },
       ],
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 // ================================================================
 
@@ -1181,10 +1176,8 @@ router.get('/js', function (req, res) {
         type: 'blog',
       },
     ],
-
   })
 })
-
 
 // ================================================================
 // Підключаємо роутер до бек-енду
