@@ -1,0 +1,151 @@
+<div>
+    <main>
+        <section>
+            <h1>{{name}}</h1>
+            <div>
+                <p>{{description}}</p>
+            </div>
+            <div><b>Today its only:</b> {{price}} $</div>
+            <hr>
+            <div>Category: <i>{{category}}</i></div>
+        </section>
+        <hr>
+        <br>
+        {{#with features}}
+        {{> title data="Features:" big=true }}
+        <br>
+        <section>
+            {{#with processor}}
+            <div>
+                <b>Processor:</b>
+            </div>
+            <ul>
+                {{> div_item name=brand text="brand" BoldText=true}}
+                {{> div_item name=model text="model"}}
+                {{> div_item name=speed text="speed"}}
+                {{> div_item name=cores text="cores"}}
+                {{> div_item name=cache text="cache"}}                
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>
+            {{#with memory}}
+            <div>
+                <b>Memory:</b>
+            </div>
+            <ul>
+                {{> div_item name=type text="type"}}
+                {{> div_item name=size text="size"}}
+                {{> div_item name=speed text="speed"}}                
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>
+            {{#with storage}}
+            <div>
+                <b>Storage:</b>
+            </div>
+            <ul>
+                {{> div_item name=type text="type"}}
+                {{> div_item name=size text="size"}}                              
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>
+            {{#with display}}
+            <div>
+                <b>Display:</b>
+            </div>
+            <ul>
+                {{> div_item name=size text="size"}}
+                {{> div_item name=resolution text="resolution"}} 
+                {{> div_item name=technology text="technology"}}
+                {{> div_item name=color_space text="color_space"}}                              
+                {{> div_item name=brightness text="brightness"}}
+                {{> div_item name=refresh_rate text="refresh_rate"}} 
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>
+            {{#with graphics}}
+            <div>
+                <b>Graphics:</b>
+            </div>
+            <ul>
+                {{> div_item name=brand text="brand"}}
+                {{> div_item name=model text="model"}} 
+                {{> div_item name=memory text="memory"}}
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>
+            <div>
+                <b>Ports:</b>
+            </div>
+            {{#each ports}}
+                {{> div_item name=type text="Type" BoldName=true}}
+                {{> div_item name=count text="count"}}
+                {{#if features}}
+                <ul>
+                    <b>Features:</b>
+                    {{#each features}}
+                        {{> div_item name=this text="" without_colon=true}}
+                    {{/each}}
+                </ul>
+                {{/if}}
+            {{/each}}
+        </section>
+        <br>
+        <section>
+            {{#with battery}}
+            <div>
+                <b>Battery:</b>
+            </div>
+            <ul>
+                {{> div_item name=type text="type"}}
+                {{> div_item name=capacity text="capacity"}} 
+                {{> div_item name=life text="life"}}
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>            
+            {{> div_item name=weight text="Weight" BoldText=true}}            
+        </section>
+        <br>
+        <section>
+            {{#with dimensions}}
+            <div>
+                <b>Dimensions:</b>
+            </div>
+            <ul>
+                {{> div_item name=height text="height"}}
+                {{> div_item name=width text="width"}} 
+                {{> div_item name=depth text="depth"}}
+            </ul>
+            {{/with}}
+        </section>
+        <br>
+        <section>            
+            {{> div_item name=operating_system text="Operating system" BoldText=true}}            
+        </section>
+        <br>
+        <hr>
+        <section>
+            <div>
+                <b>Accessories:</b>
+            </div>
+            {{#each accessories}}            
+                {{> div_item name=price text=name BoldName=true}}
+            {{/each}}
+        </section>
+        
+        {{/with}}
+
+    </main>
+</div>
