@@ -1,0 +1,223 @@
+<div>
+    <main>
+        <h1>{{make}}:</h1>
+        <br>
+        <hr>
+        {{> title data=model big=true }}
+        <div>
+            <b>Year:</b> <span class="btn btn-light">{{year}}</span>
+            <b>color:</b> <span class="btn btn-light">{{color}}</span>
+        </div>
+        <br>
+        <hr>
+        <br>
+        {{> title data="Features:" big=true }}
+        <br>
+        {{#with features}}
+        <section>
+            {{#with interior}}
+            {{> title data="Interior:" big=false }}
+            <br>
+            <div>
+                {{#with seats}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary"><b>Seats:</b> </li>
+                    <li class="list-group-item list-group-item-success">material: {{material}} </li>
+                    <li class="list-group-item list-group-item-success">color: {{color}} </li>
+                    {{#if heated}}
+                    <li class="list-group-item list-group-item-success">heated: {{heated}} </li>
+                    {{/if}}
+                    {{#if ventilated}}
+                    <li class="list-group-item list-group-item-success">ventilated: {{ventilated}} </li>
+                    {{/if}}
+                </ul>
+                {{/with}}
+            </div>
+            <br>
+            <div>
+                {{#with dashboard}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary"><b>Dashboard:</b> </li>
+                    <li class="list-group-item list-group-item-success">material: {{material}} </li>
+                    <li class="list-group-item list-group-item-success">color: {{color}} </li>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-success">Display: </li>
+                        <li class="list-group-item list-group-item-secondary">type: {{display.type}} </li>
+                        <li class="list-group-item list-group-item-secondary">size: {{display.size}} </li>
+                        <li class="list-group-item list-group-item-secondary">resolution: {{display.resolution}} </li>
+                        {{#if display.touchscreen}}
+                        <li class="list-group-item list-group-item-secondary"> with touchscreen </li>
+                        {{/if}}
+                    </ul>
+                </ul>
+                {{/with}}
+            </div>
+            <br>
+            <div>
+                {{#with audio}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-dark"><b>Audio:</b> </li>
+                    <li class="list-group-item list-group-item-success">system: {{system}} </li>
+                    <li class="list-group-item list-group-item-success">speakers: {{speakers}} </li>
+                    {{#if subwoofer}}
+                    <li class="list-group-item list-group-item-success">With subwoofer </li>
+                    {{/if}}
+                    {{#if bluetooth}}
+                    <li class="list-group-item list-group-item-success">With bluetooth </li>
+                    {{/if}}
+                    {{#if USB}}
+                    <li class="list-group-item list-group-item-success">With USB </li>
+                    {{/if}}
+                </ul>
+                {{/with}}
+            </div>
+            {{/with}}
+        </section>
+        <br>
+        <section>
+            {{#with exterior}}
+            {{> title data="Exterior:" big=true }}
+            <br>
+            <div>
+                {{#with wheels}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        <b>Wheels:</b>
+                    </li>
+                    <li class="list-group-item list-group-item-success">size: {{size}} </li>
+                    <li class="list-group-item list-group-item-success">type: {{type}} </li>
+                    <li class="list-group-item list-group-item-success">color: {{color}} </li>
+                </ul>
+                {{/with}}
+            </div>
+            <br>
+            <div>
+                {{#with headlights}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        <b>Headlights:</b>
+                    </li>
+                    <li class="list-group-item list-group-item-success">size: {{size}} </li>
+                    <li class="list-group-item list-group-item-success">type: {{type}} </li>
+                    {{#if automatic}}
+                    <li class="list-group-item list-group-item-success">automatic </li>
+                    {{/if}}
+                </ul>
+                {{/with}}
+            </div>
+            <br>
+            <div>
+                {{#with sunroof}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        <b>Sunroof:</b>
+                    </li>
+                    <li class="list-group-item list-group-item-success">size: {{size}} </li>
+                    <li class="list-group-item list-group-item-success">type: {{type}} </li>
+
+                    {{#if automatic}}
+                    <li class="list-group-item list-group-item-success">automatic </li>
+                    {{/if}}
+                </ul>
+                {{/with}}
+            </div>
+            <br>
+            {{/with}}
+        </section>
+        <br>
+        <section>
+            {{#with safety}}
+            {{> title data="Safety:" big=true }}
+            <br>
+            <div>
+                {{#with airbags}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        <b>airbags:</b>
+                    </li>
+                    <li class="list-group-item list-group-item-success">front: {{front}} </li>
+                    <li class="list-group-item list-group-item-success">side: {{side}} </li>
+                    <li class="list-group-item list-group-item-success">knee: {{knee}} </li>
+                    <li class="list-group-item list-group-item-success">rear: {{rear}} </li>
+                </ul>
+                {{/with}}
+            </div>
+            <br>
+            <div>
+                {{#with assistance}}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">
+                        <b>Assistance:</b>
+                    </li>
+                    {{#if blind_spot_monitoring}}
+                    <li class="list-group-item list-group-item-success">With blind spot monitoring</li>
+                    {{else}}
+                    <li class="list-group-item list-group-item-warning">Without blind spot monitoring</li>
+                    {{/if}}
+
+                    {{#if rear_cross_traffic_alert}}
+                    <li class="list-group-item list-group-item-success">With rear cross traffic alert</li>
+                    {{else}}
+                    <li class="list-group-item list-group-item-warning">Without rear cross traffic alert </li>
+                    {{/if}}
+
+                    {{#if lane_departure_warning}}
+                    <li class="list-group-item list-group-item-success">With lane departure warning </li>
+                    {{else}}
+                    <li class="list-group-item list-group-item-warning">Without lane departure warning  </li>
+                    {{/if}}
+
+                    {{#if adaptive_cruise_control}}
+                    <li class="list-group-item list-group-item-success">With adaptive cruise control</li>
+                    {{else}}
+                    <li class="list-group-item list-group-item-warning">Without adaptive cruise control</li>
+                    {{/if}}
+
+                    {{#if collision_warning}}
+                    <li class="list-group-item list-group-item-success">With collision warning</li>
+                    {{else}}
+                    <li class="list-group-item list-group-item-warning">Without collision warning </li>
+                    {{/if}}
+                </ul>
+                {{/with}}
+            </div>
+            <br>
+            
+            {{/with}}
+        </section>
+        {{/with }}
+        <hr>
+        {{#with engine}}
+        {{> title data="Engine:" big=true }}
+        <br>
+        <div><b>Type:</b> {{type}}</div>
+        <div><b>Displacement:</b> {{displacement}}</div>
+        <div><b>Horsepower:</b> {{horsepower}}</div>
+        <div><b>Torque:</b> {{torque}}</div>
+        <div><b>Transmission:</b> {{transmission.type}} ({{transmission.gears}} gears)</div>
+        <br>
+        {{/with }}
+        <hr>
+        {{#with fuel_economy}}
+        {{> title data="Fuel economy:" big=true }}
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-success">City: {{city}}</li>
+            <li class="list-group-item list-group-item-success">Highway: {{highway}} </li>
+            <li class="list-group-item list-group-item-success">Combined: {{combined}} </li>
+        </ul>
+
+        {{/with }}
+        <hr>
+        {{#with price}}
+        {{> title data="Price:" big=true }}
+        <div><b>Base:</b> {{base}}</div>
+        <div><b>Destination:</b> {{destination}}</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Options: </li>
+            <li class="list-group-item list-group-item-success">Navigation: {{options.navigation}} </li>
+            <li class="list-group-item list-group-item-success">Moonroof: {{options.moonroof}} </li>
+            <li class="list-group-item list-group-item-success">Premium paint: {{options.premium_paint}} </li>
+        </ul>
+        {{/with }}
+    </main>
+</div>
