@@ -2,10 +2,10 @@
   {{#with main}}
   <main>
     <section>
-      {{> title data="All skills: "  big=true }}
+      {{> title data="All skills: " big=true }}
       <ul>
         {{#each skills}}
-        <li>
+        <li class="py-1">
           {{name}}
           {{#if point includeZero=true}} ({{point}}) {{/if}}
           {{#if isTop}} (top) {{/if}}
@@ -18,10 +18,10 @@
 
 
     <section>
-      {{> title data="My hobbies: "  big=false }}
+      {{> title data="My hobbies: " big=false }}
       <ol>
         {{#each hobbies}}
-        <li>
+        <li class="py-1">
           {{name}}
           {{#if isMain}} (Favorite) {{/if}}
         </li>

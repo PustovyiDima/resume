@@ -1,19 +1,22 @@
 <div>
   {{#with main}}
-  <main>
-    <section>
-      {{> title data=summary.title  big=true }}
-      <div>
-        <p>{{summary.text}}</p>
+  <main class="row">
+    <section class="mb-5 col-12">
+      {{> title data=summary.title big=true }}
+      <div class="row">
+        <div class="col-7">
+          <p>{{summary.text}}</p>
+        </div>
       </div>
     </section>
-    <section>
-      {{> title data=experience.title  big=false }}
-      <div>
-        <p>{{experience.text}}</p>
+    <section class="mb-3 col-12">
+      {{> title data=experience.title big=false }}
+      <div class="row">
+        <div class="col-7">
+          <p>{{experience.text}}</p>
+        </div>
       </div>
     </section>
   </main>
   {{/with}}
 </div>
-

@@ -2,5 +2,10 @@
 	{{> link text="Skills" href="/skills" line=true }}
 	{{> link text="Summary" href="/summary" line=true }}
 	{{> link text="Education" href="/education" line=true }}
+
+	{{#each nav_links}}
+	{{> link text=name href=href line=true}}
+	{{/each}}
+
 	{{> link text="Work" href="/work" line=true noLine=true}}
 </nav>

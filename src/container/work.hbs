@@ -1,4 +1,4 @@
-<div>
+<div class="mb-2">
 	{{#with main}}
 	<main>
 		<section>
@@ -7,11 +7,8 @@
 				<ul>
 					{{#each works}}
 					<li>
-						<div>{{position}}</div>
-
-						<br>
-
-						<div>
+						<div class="mb-2">{{position}}</div>
+						<div class="mb-2">
 							{{duration.from}}
 							-
 							{{#if duration.to}}
@@ -20,49 +17,36 @@
 							(Досі працюємо)
 							{{/if}}
 						</div>
-
-						<br>
 						{{#if company.url}}
 						{{>link text=company.name href=company.url noLine=true }}
 						{{else}}
 						<b>{{company.name}}</b>
 						{{/if}}
-
-
-
-						<br>
-						<br>
-						<br>
-
-						<div><strong>Projects: ({{projectAmount}})</strong></div>
-
-						<br>
-
+						<div class="my-3"><strong>Projects: ({{projectAmount}})</strong></div>
 						<ul>
 							{{#each projects}}
-							<li>
+							<li class="mb-2">
 								<div>{{>link text=name href=url noLine=true }}</div>
-								<br>
-								<div>
+
+								<div class="my-1">
 									<p>{{about}}</p>
 								</div>
-								<br>
 								<div><em>Project stacks ({{stackAmound}}) </em></div>
-								<br>
-								<div>
+
+								<div class="my-2">
 									<ul>
 										{{#each stacks}}
 										<li>{{name}}</li>
 										{{/each}}
 									</ul>
 								</div>
-								<br>
+
 								<div><em>Project awards</em></div>
-								<br>
-								<div>
+
+								<div class="my-2">
 									<ul>
 										{{#each awards}}
-										<li>{{name}}</li>
+										<li class="pb-1">{{name}}</li>
 										{{/each}}
 
 									</ul>
