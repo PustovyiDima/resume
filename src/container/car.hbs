@@ -1,24 +1,24 @@
 <div>
     <main>
-        <h1>{{make}}:</h1>
-        <br>
+        <h1 class="mb-2">{{make}}:</h1>
+
         <hr>
         {{> title data=model big=true }}
-        <div>
+        <div class="mb-2">
             <b>Year:</b> <span class="btn btn-light">{{year}}</span>
             <b>color:</b> <span class="btn btn-light">{{color}}</span>
         </div>
-        <br>
-        <hr>
-        <br>
+
+        <hr class="mb-2">
+
         {{> title data="Features:" big=true }}
-        <br>
+
         {{#with features}}
-        <section>
+        <section class="mb-2">
             {{#with interior}}
             {{> title data="Interior:" big=false }}
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with seats}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary"><b>Seats:</b> </li>
@@ -33,8 +33,8 @@
                 </ul>
                 {{/with}}
             </div>
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with dashboard}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary"><b>Dashboard:</b> </li>
@@ -52,8 +52,8 @@
                 </ul>
                 {{/with}}
             </div>
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with audio}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-dark"><b>Audio:</b> </li>
@@ -73,12 +73,12 @@
             </div>
             {{/with}}
         </section>
-        <br>
-        <section>
+
+        <section class="mb-2">
             {{#with exterior}}
             {{> title data="Exterior:" big=true }}
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with wheels}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary">
@@ -90,8 +90,8 @@
                 </ul>
                 {{/with}}
             </div>
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with headlights}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary">
@@ -105,8 +105,8 @@
                 </ul>
                 {{/with}}
             </div>
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with sunroof}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary">
@@ -121,15 +121,15 @@
                 </ul>
                 {{/with}}
             </div>
-            <br>
+
             {{/with}}
         </section>
-        <br>
-        <section>
+
+        <section class="mb-2">
             {{#with safety}}
             {{> title data="Safety:" big=true }}
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with airbags}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary">
@@ -142,8 +142,8 @@
                 </ul>
                 {{/with}}
             </div>
-            <br>
-            <div>
+
+            <div class="mb-2">
                 {{#with assistance}}
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary">
@@ -164,7 +164,7 @@
                     {{#if lane_departure_warning}}
                     <li class="list-group-item list-group-item-success">With lane departure warning </li>
                     {{else}}
-                    <li class="list-group-item list-group-item-warning">Without lane departure warning  </li>
+                    <li class="list-group-item list-group-item-warning">Without lane departure warning </li>
                     {{/if}}
 
                     {{#if adaptive_cruise_control}}
@@ -181,21 +181,21 @@
                 </ul>
                 {{/with}}
             </div>
-            <br>
-            
+
+
             {{/with}}
         </section>
         {{/with }}
         <hr>
         {{#with engine}}
         {{> title data="Engine:" big=true }}
-        <br>
-        <div><b>Type:</b> {{type}}</div>
-        <div><b>Displacement:</b> {{displacement}}</div>
-        <div><b>Horsepower:</b> {{horsepower}}</div>
-        <div><b>Torque:</b> {{torque}}</div>
-        <div><b>Transmission:</b> {{transmission.type}} ({{transmission.gears}} gears)</div>
-        <br>
+
+        <div class="mb-2"><b>Type:</b> {{type}}</div>
+        <div class="mb-2"><b>Displacement:</b> {{displacement}}</div>
+        <div class="mb-2"><b>Horsepower:</b> {{horsepower}}</div>
+        <div class="mb-2"><b>Torque:</b> {{torque}}</div>
+        <div class="mb-2"><b>Transmission:</b> {{transmission.type}} ({{transmission.gears}} gears)</div>
+
         {{/with }}
         <hr>
         {{#with fuel_economy}}

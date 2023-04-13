@@ -1,28 +1,31 @@
+<div class="m-1 ps-4">
+    {{#if id}}
+    {{> textBlok firstText="id" secondText=id fistBoldText=true}}
+    {{/if}}
 
-{{#if id}}
-{{> textBlok firstText="id" secondText=id fistBoldText=true}}
-{{/if}}
+    {{#if name}}
+    {{> textBlok firstText="name" secondText=name fistBoldText=true}}
+    {{/if}}
 
-{{#if name}}
-{{> textBlok firstText="name" secondText=name fistBoldText=true}}
-{{/if}}
+    {{#if gender}}
+    {{> textBlok firstText="gender" secondText=gender fistBoldText=true}}
+    {{/if}}
 
-{{#if gender}}
-{{> textBlok firstText="gender" secondText=gender fistBoldText=true}}
-{{/if}}
+    {{#if age}}
+    {{> textBlok firstText="age" secondText=age fistBoldText=true}}
+    {{/if}}
 
-{{#if age}}
-{{> textBlok firstText="age" secondText=age fistBoldText=true}}
-{{/if}}
+    {{#if description}}
+    {{> textBlok firstText=description fistBoldText=false}}
+    {{/if}}
 
-{{#if description}}
-{{> textBlok firstText=description fistBoldText=false}}
-{{/if}}
-<br>
-{{#if data}}
-    <b>{{dataTitle}}:</b>
-    {{#each data}}
+    {{#if data}}
+    <div class="m-2 ps-4">
+        <b class="mb-2">{{dataTitle}}:</b>
+
+        {{#each data}}
         {{#if id}}
+        <hr>
         {{> textBlok firstText="id" secondText=id fistBoldText=true}}
         {{/if}}
 
@@ -41,7 +44,10 @@
         {{#if description}}
         {{> textBlok firstText=description fistBoldText=false}}
         {{/if}}
-        <br>
-       
-    {{/each}}
-{{/if}}
+
+
+
+        {{/each}}
+    </div>
+    {{/if}}
+</div>

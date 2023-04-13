@@ -1,34 +1,40 @@
 <div>
     <main>
-        <h1>{{name}}</h1>
+        <h1 class="mb-2">{{name}}</h1>
         <hr>
-        <br>
+
         {{#each users}}
         <section>
             {{> title data=name big=true}}
-            <br>
-            {{> textBloks id=id name=false gender=gender age=age }}
-            
+            <div class="mb-2">
+                {{> textBloks id=id name=false gender=gender age=age }}
+            </div>
+
             {{#if friends}}
+            <hr>
+
             {{> title data="Friends:" big=false}}
-            <br>
+
             {{#each friends}}
-            {{> textBloks id=id name=name gender=gender age=age data=mutual_friends dataTitle="mutual friends"}}
-            <br>            
+            <div class="mb-2">
+                {{> textBloks id=id name=name gender=gender age=age data=mutual_friends dataTitle="mutual friends"}}
+            </div>
             {{/each}}
-            
+
             {{/if}}
-            
+
             {{#if groups}}
+            <hr>
             {{> title data="Groups:" big=false}}
             {{#each groups}}
-            {{> textBloks id=id name=name description=description data=members dataTitle="members"}}
-            <br>
+            <div class="mb-2">
+                {{> textBloks id=id name=name description=description data=members dataTitle="members"}}
+            </div>
             {{/each}}
             {{/if}}
-        </section>    
-        <br>
-       
+        </section>
+
+
         {{/each}}
 
     </main>
