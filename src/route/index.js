@@ -1576,7 +1576,7 @@ router.get('/shopproduct', function (req, res) {
           description:
             'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
           isHot: false,
-          idNew: false,
+          idNew: true,
         },
         {
           image: 'https://picsum.photos/400/200',
