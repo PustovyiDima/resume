@@ -25,32 +25,28 @@
     </section>
 
     {{#with productData}}
-    <section class="col-7 pe-5">
-        <div class="row mb-3">
-            <div class="col-12 ">
-                <div class="card">
-                    <img src={{img}} alt="" class="card-img-top">
-                </div>
+    <section class="col-7 pe-5 mb-3">
+        <div class=" mb-3">
+            <div class="card">
+                <img src={{img}} alt="" class="card-img-top">
             </div>
         </div>
         {{#with info}}
-        <div class="row">
-            <div class="col-12">
-                <div class="card p-3">
-                    <h4 class="card-title ">{{title}}</h4>
-                    <p>{{about}}</p>
-                    <h3><b>{{price}}</b></h3>
-                    <div>
-                        {{#each category}}
-                        <span class="badge rounded-pill 
+        <div class="mb-2">
+            <div class="card p-3">
+                <h4 class="card-title ">{{title}}</h4>
+                <p>{{about}}</p>
+                <h3><b>{{price}}</b></h3>
+                <div>
+                    {{#each category}}
+                    <span class="badge rounded-pill 
                         {{#if isHot}}  text-bg-warning {{/if}}
                         {{#if isNew}} text-bg-primary  {{/if}}
                         {{#if isBonus}} text-bg-info  {{/if}}
                         text-light ">
-                            {{name}}
-                        </span>
-                        {{/each}}
-                    </div>
+                        {{name}}
+                    </span>
+                    {{/each}}
                 </div>
             </div>
         </div>
@@ -59,7 +55,7 @@
     <section class="col-5 ">
 
         {{#with item}}
-        <table class="table ">
+        <table class="table text-capitalize ">
             <thead>
                 <tr>
                     {{#each head}}
@@ -96,7 +92,7 @@
         </div>
         {{/with}}
         {{#if alert.isError}}
-        <div class="alert  alert-danger ">{{alert.text}}</div>
+        <div class="alert  alert-danger px-2">{{alert.text}}</div>
         {{/if}}
     </section>
     <section class="col-12 mt-2 mb-5">
