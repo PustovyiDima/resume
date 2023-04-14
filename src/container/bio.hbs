@@ -1,33 +1,29 @@
 <div>
     <h1>{{name}}</h1>
 
-    <div><b>Birth: </b> {{birthdate}} in <i>{{birthplace}}</i> </div>
-    <br>
-    <div><b>Death: </b> {{deathdate}} in <i>{{deathplace}}</i> </div>
-    <br>
-    <div><b>Nationality: </b> {{nationality}}</div>
-    <br>
-    <div><b>Occupation: </b> {{occupation}}</div>
-    <br>
-    <hr>
-    <br>
-    <section>
+    <div class="mb-2"><b>Birth: </b> {{birthdate}} in <i>{{birthplace}}</i> </div>
+    <div class="mb-2"><b>Death: </b> {{deathdate}} in <i>{{deathplace}}</i> </div>
+    <div class="mb-2"><b>Nationality: </b> {{nationality}}</div>
+    <div class="mb-2"><b>Occupation: </b> {{occupation}}</div>
+
+    <hr class="mb-3">
+
+    <section class="mb-2">
         {{> title data="Known for:" big=true }}
         <ul>
             {{#each known_for}}
-            <li>{{this}}</li>
-            <br>
+            <li class="pb-2">{{this}}</li>
             {{/each }}
         </ul>
     </section>
-    <br>
-    <hr>
-    <br>
-    <section>
+
+    <hr class="mb-3">
+
+    <section class="mb-2">
         {{> title data="Education:" big=true }}
         <ul>
             {{#each education}}
-            <li>
+            <li class="pb-2">
                 <div>
                     <b>{{institution}} ({{year}})</b>
                 </div>
@@ -35,126 +31,125 @@
                     {{degree}} <i>({{field}})</i>
                 </div>
             </li>
-            <br>
+
             {{/each }}
         </ul>
     </section>
-    <br>
-    <hr>
-    <br>
-    <section>
+
+    <hr class="mb-3">
+
+    <section class="mb-2">
         {{> title data="Notable publications:" big=true }}
         <ol>
             {{#each notable_publications}}
-            <li>
+            <li class="mb-2">
                 <div><cite>{{title}} ({{year}})</cite></div>
                 <div>{{publisher}}</div>
             </li>
-            <br>
+
             {{/each }}
         </ol>
     </section>
-    <br>
-    <hr>
-    <br>
-    <section>
+
+    <hr class="mb-3">
+
+    <section class="mb-2">
         {{> title data="Partners:" big=true }}
         <ul>
             {{#each partners}}
-            <li>
+            <li class="mb-2">
                 <div><b>{{name}}</b> <i>({{relationship}})</i></div>
                 <div>({{years}})</div>
             </li>
-            <br>
+
             {{/each }}
         </ul>
     </section>
-    <br>
-    <hr>
-    <br>
-       <section>
+
+    <hr class="mb-2">
+
+    <section class="mb-2">
         {{> title data="Awards:" big=true }}
         <ul>
             {{#each awards}}
-            <li>
-                <div><cite>{{title}}</cite> <b>({{year}})</b></div>
-                <br>
+            <li class="mb-2">
+                <div class="mb-2"><cite>{{title}}</cite> <b>({{year}})</b></div>
+
                 <div>{{description}}</div>
             </li>
-            <br>
+
             {{/each }}
         </ul>
     </section>
-    <br>
-    <hr>
-    <br>
-    
-    
-    <section>
+
+    <hr class="mb-3">
+
+
+
+    <section class="mb-2">
         {{> title data="Influences:" big=true }}
         <ul>
             {{#each influences}}
-            <li>{{this}}</li>
-            <br>
+            <li class="mb-2">{{this}}</li>
             {{/each }}
         </ul>
     </section>
-    <br>
-    <hr>
-    <br>
-    
-    <section>
+
+    <hr class="mb-3">
+
+
+    <section class="mb-2">
         {{> title data="Influenced:" big=true }}
         <ul>
             {{#each influenced}}
-            <li>{{this}}</li>
-            <br>
+            <li class="mb-2">{{this}}</li>
+
             {{/each }}
         </ul>
     </section>
-    <br>
-    <hr>
-    <br>
-    
-    
-    <section>
+
+    <hr class="mb-3">
+
+
+
+    <section class="mb-2">
         {{> title data="Quotes:" big=true }}
         <ul>
             {{#each quotes}}
-            <li><q>{{this}}</q></li>
-            <br>
+            <li class="mb-2"><q>{{this}}</q></li>
+
             {{/each }}
         </ul>
     </section>
-    <br>
-    <hr>
-    <br>
-    <section>
+
+    <hr class="mb-3">
+
+    <section class="mb-2">
         {{> title data="Major discoveries:" big=true }}
         <ol>
             {{#each major_discoveries}}
-            <li>
-                <div><cite>{{title}}</cite> <b>({{year}})</b></div>
-                <br>
+            <li class="mb-2">
+                <div class="mb-2"><cite>{{title}}</cite> <b>({{year}})</b></div>
+
                 <div>{{description}}</div>
             </li>
-            <br>
+
             {{/each }}
         </ol>
     </section>
-    <br>
-    <hr>
-    <br>
-    <section>
+
+    <hr class="mb-2">
+
+    <section class="mb-2">
         {{> title data="Contributions:" big=true }}
         <ol>
             {{#with contributions}}
-            <li>
-                <div><cite>{{title}}</cite> <b>({{year}})</b></div>
-                <br>
+            <li class="mb-2">
+                <div class="mb-2"><cite>{{title}}</cite> <b>({{year}})</b></div>
+
                 <div>{{description}} <i>({{field}})</i></div>
             </li>
-            <br>
+
             {{/with }}
         </ol>
     </section>

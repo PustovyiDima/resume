@@ -1,11 +1,24 @@
-<nav>
-	{{> link text="Skills" href="/skills" line=true }}
-	{{> link text="Summary" href="/summary" line=true }}
-	{{> link text="Education" href="/education" line=true }}
+<nav class="row">
+	<div class="col-2">
+		{{> link text="Skills" href="/skills" line=true noLine=true}}
+	</div>
+	<div class="col-2">
+		{{> link text="Summary" href="/summary" line=true noLine=true}}
+	</div>
+	<div class="col-2">
+		{{> link text="Education" href="/education" line=true noLine=true}}
+	</div>
 
 	{{#each nav_links}}
-	{{> link text=name href=href line=true}}
+	<div class="col-2">
+		{{> link text=name href=href line=true noLine=true}}
+	</div>
 	{{/each}}
 
-	{{> link text="Work" href="/work" line=true noLine=true}}
+	<div class="col-2">
+		{{> link text="Work" href="/work" line=true noLine=true}}
+	</div>
+
+
+
 </nav>
