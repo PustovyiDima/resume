@@ -1,87 +1,74 @@
-<main>
-    <div class="card text-bg-dark mb-5">
-        <div class="nav ">
-            <div class="nav-item">
-                <a href="#" class="nav-link text-light disabled">Home</a>
-            </div>
-            <div class="nav-item">
-                <a href="#" class="nav-link text-light disabled">Catalog</a>
-            </div>
-            <div class="nav-item">
-                <a href="#" class="nav-link text-light disabled">FAQ page</a>
-            </div>
-            <div class="nav-item">
-                <a href="#" class="nav-link text-light active">Bootstrap</a>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="row g-3 mb-5">
+<main class="p-5">
+    <div class="row g-3">
         <div class="col-12">
-            <div class="nav nav-tabs text-bg-light">
-                <div class="nav-item  ">
-                    <a href="#" class="nav-link  disabled">Home</a>
-                </div>
-                <div class="nav-item ">
-                    <a href="#" class="nav-link ">Catalog</a>
-                </div>
-                <div class="nav-item ">
-                    <a href="#" class="nav-link  ">FAQ page</a>
-                </div>
-                <div class="nav-item ">
-                    <a href="#" class="nav-link  active">Bootstrap</a>
-                </div>
-            </div>
+            <label class="form-label">Email adress</label>
+            <input type="text" class="form-control">
+            <div class="form-text text-danger">Error you need to set corect email</div>
         </div>
-        <div class="col-4">
-            <div class="card ">
-                <div class="nav flex-column ">
-                    <div class="card-body">
-                        <div class="nav-item card mb-2">
-                            <a href="#" class="nav-link disabled">Home</a>
-                        </div>
-
-                        <div class="nav-item card mb-2">
-                            <a href="#" class="nav-link  ">Catalog</a>
-                        </div>
-
-                        <div class="nav-item card mb-2">
-                            <a href="#" class="nav-link  ">FAQ page</a>
-                        </div>
-
-                        <div class="nav-item card">
-                            <a href="#" class="nav-link active">Bootstrap</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-8">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">PC and notebook</a></li>
-                <li class="breadcrumb-item">Notebook Dell</li>
-            </ol>
+        <div class="col-12">
             <div class="row">
-                <div class="col-12">
-                    <h6> Hello world! <span class="badge text-uppercase text-light text-bg-warning rounded-pill">Топ
-                            продаж</span></h6>
+                <div class="col-2 pt-1">
+                    <label class="form-label">Email adress</label>
+                </div>
+                <div class="col-3">
+                    <input type="color" class="form-control form-control-sm">
+                </div>
+                <div class="col-7 pt-1">
+                    <div class="form-text text-success">Error you need to set corect email</div>
                 </div>
             </div>
-            <button class="btn btn-primary rounded-pill mt-2 mb-4 mx-3  px-5">Button</button>
-            <div class="alert alert-primary">
-                Важлива інформація
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="col-12">
+            <label class="form-label">Select role</label>
+            <select name="" id="" class="form-select form-select-sm">
+                <option selected>Open list</option>
+                <option value="1">Admin</option>
+                <option value="2">User</option>
+            </select>
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="col-6">
+            <div class="form-label">Select food</div>
+            <div class="form-check">
+                <label class="form-check-label">Aple </label>
+                <input name="food" type="checkbox" class="form-check-input">
             </div>
-
+            <div class="form-check">
+                <label class="form-check-label">Orange </label>
+                <input name="food" type="checkbox" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">Banana </label>
+                <input name="food" type="checkbox" class="form-check-input">
+            </div>
         </div>
 
+        <div class="col-6 radio-field">
+            <div class="form-label">Select food</div>
+            <div class="form-check">
+                <label class="form-check-label">Aple </label>
+                <input name="food" type="radio" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">Orange </label>
+                <input name="food" type="radio" class="form-check-input">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">Banana </label>
+                <input name="food" type="radio" class="form-check-input">
+            </div>
+        </div>
+
+        <div class="col-12 radio-field">
+            <div class="form-check form-switch">
+                <label class="form-check-label">Get bonus </label>
+                <input name="food" type="checkbox" class="form-check-input">
+            </div>
+        </div>
     </div>
-
-
-
-
-
-
 </main>
