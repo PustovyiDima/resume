@@ -157,6 +157,33 @@
                 {{/each}}
             </div>
             {{/with}}
+            <div>
+                <label class="form-label">{{your_expirience.label}}</label>
+                <input type="text" class="form-control">
+            </div>
+            {{#with purchase_frequency}}
+            <div>
+                <label class="form-label">{{label}}</label>
+                <select name="frequency" class="form-select">
+                    <option selected>{{placeholder}}</option>
+                    {{#each options}}
+                    <option value={{value}}>{{text}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            {{/with}}
+            {{#with factors}}
+            <div>
+                <div class="form-label">{{title}}</div>
+                {{#each options}}
+                <div class="form-check">
+                    <label class="form-check-label">{{this}} </label>
+                    <input name="factors" type="checkbox" class="form-check-input">
+                </div>
+                {{/each}}
+
+            </div>
+            {{/with}}
         </section>
         {{/with}}
 
@@ -204,6 +231,10 @@
         {{/with}}
 
     </div>
+
+    <hr>
+
+    {{> shopfuter footer=footer text=text link=link}}
 
 
 </main>
