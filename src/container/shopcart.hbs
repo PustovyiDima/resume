@@ -1,0 +1,174 @@
+<main class="row mt-3 ml-2">
+    {{#with navigation}}
+    <section class="col-12 nav my-3">
+        {{#each links}}
+        <div class="nav-item  mb-2">
+            <a href={{href}} class="nav-link  {{#if @last}} disabled {{/if}}"> {{text}} </a>
+        </div>
+        {{/each}}
+    </section>
+    {{/with}}
+
+
+    <section class="col-12 my-3">
+        <ul class="breadcrumb">
+            {{#each breadcrumb}}
+            <li class="breadcrumb-item  mb-2">
+                {{#if url}}
+                <a href={{url}}> {{name}} </a>
+                {{else}}
+                {{name}}
+                {{/if}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+
+    {{#with productData}}
+    <section class="col-7 pe-5 mb-3">
+        <div class=" mb-3">
+            <div class="card">
+                <img src={{img}} alt="" class="card-img-top">
+            </div>
+        </div>
+        {{#with info}}
+        <div class="mb-2">
+            <div class="card p-3">
+                <h4 class="card-title ">{{title}}</h4>
+                <p>{{about}}</p>
+                <h3><b>{{price}}</b></h3>
+                <div>
+                    {{#each category}}
+                    <span class="badge rounded-pill 
+                        {{#if isHot}}  text-bg-warning {{/if}}
+                        {{#if isNew}} text-bg-primary  {{/if}}
+                        {{#if isBonus}} text-bg-info  {{/if}}
+                        text-light ">
+                        {{name}}
+                    </span>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+    <section class="col-5 ">
+
+        {{#with item}}
+        <table class="table text-capitalize ">
+            <thead>
+                <tr>
+                    {{#each head}}
+                    <th>{{this}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each body}}
+                <tr>
+                    {{#each this}}
+                    {{#if @first}}
+                    <th>{{this}}</th>
+                    {{else}}
+                    <td>{{this}}</td>
+                    {{/if}}
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{/with}}
+        {{#with param}}
+        <div class="mb-3">
+            <div class="card">
+                <div class="card-header">
+                    {{title}}
+                </div>
+                <ul class="list-group list-group-flush">
+                    {{#each list}}
+                    <div class="list-group-item">{{this}}</div>
+                    {{/each}}
+            </div>
+        </div>
+        {{/with}}
+        {{#if alert.isError}}
+        <div class="alert  alert-danger px-2">{{alert.text}}</div>
+        {{/if}}
+    </section>
+    <section class="col-12 mt-2 mb-5">
+        <div class="card">
+            <div class="card-body">
+                {{#each actionList }}
+                <button class="btn 
+            {{#if isWarning}} btn-warning text-light{{/if}}
+            {{#if isError}} btn-outline-danger {{/if}}
+            {{#if isSuccess}} btn-success {{/if}}
+            {{#if isGood}} btn-outline-success {{/if}}
+             px-4 me-3">{{name}}</button>
+                {{/each}}
+            </div>
+        </div>
+
+    </section>
+    {{/with}}
+
+    <hr class="my-5">
+
+    {{#with goodsOtherBlock}}
+    <section class="col-12">
+        <h2 class="mb-3 text-center">{{title}}</h2>
+        <div class="row g-2">
+            {{#each cards}}
+            <div class="col-4">
+                <div class="card">
+                    <img src={{image}} alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4>{{title}}
+                            {{#if isHot}} <span class="badge rounded-pill  text-bg-warning text-light">Hot</span>{{/if}}
+                            {{#if idNew}} <span class="badge rounded-pill  text-bg-primary text-light">New</span>{{/if}}
+                        </h4>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+    {{/with}}
+
+    <hr class="my-5">
+
+    {{#with service}}
+    <section class="col-12 ">
+        <div class="card text-bg-success text-center text-light py-2">
+            <h2>{{title}}</h2>
+            <p>{{description}}</p>
+
+            <div class="text-center my-2">
+                {{#each buttons}}
+                <a href={{link}} rel={{rel}} class="btn btn-primary">{{text}}</a>
+                {{/each}}
+            </div>
+
+        </div>
+    </section>
+    {{/with}}
+
+    <hr class="my-5">
+
+    <section class="col-12">
+        <div class="row">
+            {{#each footer}}
+            <div class="nav flex-column col-2">
+                {{#each this}}
+                <div class="nav-item">
+                    <a href={{link}} class="nav-link px-0 {{#if @last}} disabled {{/if}}">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+
+</main>

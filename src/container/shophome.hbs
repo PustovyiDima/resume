@@ -1,43 +1,5 @@
-<main class="row">
-    {{#with navigation}}
-    <section class="card my-3 col-12">
+<main class="row g-5">
 
-        <div class="nav">
-            {{#each links}}
-            <div class="nav-item">
-                <a href={{href}} class="nav-link py-3 px-2">{{text}}</a>
-            </div>
-            {{/each}}
-        </div>
-
-    </section>
-    {{/with}}
-
-    {{#with newsBlock}}
-    <section class="mt-5 col-12">
-        <h2 class="mt-4 mb-3 text-center">{{title}}</h2>
-        <div class="row gx-2 gy-3">
-            {{#each cards}}
-            <div class="col-3">
-                <div class="card ">
-                    <div class="card-header text-bg-dark text-light ">
-                        {{title}}
-                        {{#if isNew}} <span class="badge rounded-pill px-2 text-bg-success"> New </span>{{/if}}
-                        {{#if isTop}} <span class="badge rounded-pill px-2 text-bg-danger"> Top </span> {{/if}}
-                    </div>
-                    <div class="card-footer text-bg-dark text-light ">
-                        <div>{{description}}</div>
-                    </div>
-
-                </div>
-            </div>
-            {{/each}}
-        </div>
-    </section>
-    {{/with}}
-
-
-    <hr class="mt-5">
 
 
     {{#with goodsBlock}}
