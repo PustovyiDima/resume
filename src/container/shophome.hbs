@@ -39,8 +39,6 @@
 
     <hr class="mt-5">
 
-
-
     {{#with goodsBlock}}
     <section class=" mt-5 col-12">
         <div class="nav nav-tabs mb-4">
@@ -116,19 +114,8 @@
 
 
 
-    <section class="col-12">
-        <div class="row">
-            {{#each footer}}
-            <div class="nav flex-column col-2">
-                {{#each this}}
-                <div class="nav-item">
-                    <a href={{link}} class="nav-link px-0 {{#if @last}} disabled {{/if}}">{{text}}</a>
-                </div>
-                {{/each}}
-            </div>
-            {{/each}}
-        </div>
-    </section>
+    {{> shop_footer footer=footer text=text link=link}}
+
 
 
 </main>

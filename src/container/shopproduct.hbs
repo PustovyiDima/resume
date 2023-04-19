@@ -156,19 +156,8 @@
 
     <hr class="my-5">
 
-    <section class="col-12">
-        <div class="row">
-            {{#each footer}}
-            <div class="nav flex-column col-2">
-                {{#each this}}
-                <div class="nav-item">
-                    <a href={{link}} class="nav-link px-0 {{#if @last}} disabled {{/if}}">{{text}}</a>
-                </div>
-                {{/each}}
-            </div>
-            {{/each}}
-        </div>
-    </section>
+    {{> shopfuter footer=footer text=text link=link}}
+
 
 
 </main>
