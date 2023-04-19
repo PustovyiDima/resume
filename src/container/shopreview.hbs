@@ -1,5 +1,5 @@
 <main class="row g-4">
-    {{!-- Header --}}
+    {{> shop_header navigation=navigation links=links}}
 
     {{#with formBlock}}
     <section class="col-8">
@@ -86,8 +86,9 @@
     {{/each}}
 
 
-    {{!-- gren block service--}}
 
-    {{!-- footer --}}
+    {{> shop_green_services service=service }}
+    <hr class="mt-5">
+    {{> shop_footer footer=footer link=link text=text}}
 
 </main>

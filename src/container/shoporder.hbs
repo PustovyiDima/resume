@@ -1,19 +1,6 @@
 <main class="row gy-5 gx-4 p-3">
-    {{#with navigation}}
-    <section class="col-12">
-        <div class="card">
-            <div class="nav">
-                {{#each links}}
-                {{#if href}}
-                <a href={{href}} class="nav-link">{{text}}</a>
-                {{else}}
-                <div class="nav-link text-secondary">{{text}} </div>
-                {{/if}}
-                {{/each}}
-            </div>
-        </div>
-    </section>
-    {{/with}}
+    {{> shop_header navigation=navigation links=links}}
+
     <h1 class="col-12 py-2">{{header}} </h1>
 
 
@@ -234,7 +221,6 @@
 
     <hr>
 
-    {{> shopfuter footer=footer text=text link=link}}
-
+    {{> shop_footer footer=footer link=link text=text}}
 
 </main>
