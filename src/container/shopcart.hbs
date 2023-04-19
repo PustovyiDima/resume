@@ -1,15 +1,7 @@
 <main class="row p-4 g-4">
-    {{#with navigation}}
-    <div class="card col-12">
-        <section class="col-12 nav ">
-            {{#each links}}
-            <div class="nav-item  ">
-                <a href={{href}} class="nav-link  {{#if @last}} disabled {{/if}}"> {{text}} </a>
-            </div>
-            {{/each}}
-        </section>
-    </div>
-    {{/with}}
+    {{> shop_header navigation=navigation links=links}}
+
+
     {{#with header}}
     <div class="col-12 p-0 ">
         <h1 class="mb-3">{{title}}</h1>
@@ -41,48 +33,10 @@
     <hr>
 
 
-    {{#with goodsOtherBlock}}
-    <div class="col-12">
-        <h2 class="text-center mb-3">{{title}}</h2>
-        <div class="row">
-            {{#each cards}}
-            <div class="col-4">
-                <div class="card">
-                    <img src={{image}} alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title ">
-                            {{title}}
-                            {{#if isHot}}
-                            <span class="badge rounded-pill text-bg-warning text-light px-2">Hot </span>
-                            {{/if}}
-                            {{#if idNew}}
-                            <span class="badge rounded-pill text-bg-primary px-2">New</span>
-                            {{/if}}
-                        </h5>
-                        <p>{{description}}</p>
+    {{> shop_other_prod goodsOtherBlock=goodsOtherBlock}}
 
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
-    </div>
-    {{/with}}
     <hr>
-    {{#with subscribe}}
-    <div class="col-12 p-0 mb-3">
-        <div class="card text-bg-dark p-3 ">
-            <h2>{{header}}</h2>
-            <p>{{description}}</p>
-            {{#each buttons}}
-            <div class=" pb-3">
-                <a href={{link}} class="btn btn-primary">{{text}} </a>
-            </div>
-            {{/each}}
-        </div>
-
-    </div>
-    {{/with}}
+    {{> shop_subscripe subscribe=subscribe}}
     <hr>
 
     {{> shop_footer footer=footer link=link text=text}}

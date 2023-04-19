@@ -1,15 +1,6 @@
 <main class="row g-2">
-    {{#with navigation}}
-    <div class="card mb-4">
-        <section class=" nav ">
-            {{#each links}}
-            <div class="nav-item ">
-                <a href={{href}} class="nav-link  {{#if @last}} disabled {{/if}}"> {{text}} </a>
-            </div>
-            {{/each}}
-        </section>
-    </div>
-    {{/with}}
+    {{> shop_header navigation=navigation links=links}}
+
     <h1>{{header}}</h1>
     {{#with purchase}}
     <div class="col-12 mb-4">

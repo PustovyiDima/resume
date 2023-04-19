@@ -1,17 +1,7 @@
 <main class="row">
-    {{#with navigation}}
-    <section class="card my-3 col-12">
 
-        <div class="nav">
-            {{#each links}}
-            <div class="nav-item">
-                <a href={{href}} class="nav-link py-3 px-2">{{text}}</a>
-            </div>
-            {{/each}}
-        </div>
+    {{> shop_header navigation=navigation links=links}}
 
-    </section>
-    {{/with}}
 
     {{#with newsBlock}}
     <section class="mt-5 col-12">
@@ -81,39 +71,13 @@
     <hr class="mt-5">
 
 
-    {{#with subscribe}}
-    <section class="card mt-5 p-2 col-12 text-bg-dark text-light">
-        <h2 class="m-2">{{header}}</h2>
-        <div class="m-2">{{description}}</div>
-        {{#each buttons}}
-        <div class="p-2">
-            <a href={{link}} class="btn btn-primary text-light">{{text}} </a>
-        </div>
-        {{/each}}
-    </section>
-    {{/with}}
+    {{> shop_subscripe subscribe=subscribe}}
+
 
 
     <hr class="my-5">
-
-
-    {{#with service}}
-    <section class="card p-2 col-12 text-bg-success text-light">
-        <h2 class="m-2 text-center">{{title}}</h2>
-        <div class="m-2 text-center">{{description}}</div>
-        {{#each buttons}}
-        <div class="p-2 text-center">
-            <a href={{link}} class="btn btn-primary text-light">{{text}} </a>
-        </div>
-        {{/each}}
-    </section>
-    {{/with}}
-
-
+    {{> shop_green_services service=service }}
     <hr class="mt-5">
-
-
-
     {{> shop_footer footer=footer text=text link=link}}
 
 
