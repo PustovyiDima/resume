@@ -1,4 +1,4 @@
-<main class="row g-5">
+<main class="row g-4">
     {{!-- Header --}}
 
     {{#with formBlock}}
@@ -31,7 +31,7 @@
             <div>
                 {{#each buttons}}
                 <a href={{link}}
-                    class="btn text-light me-2 {{#if isWarning}} btn-warning {{/if}} {{#if isSuccess}} btn-success {{/if}} {{#if isDanger}} btn-danger {{/if}}">{{text}}</a>
+                    class="btn text-light me-1 {{#if isWarning}} btn-warning {{/if}} {{#if isSuccess}} btn-success {{/if}} {{#if isDanger}} btn-danger {{/if}}">{{text}}</a>
                 {{/each}}
             </div>
         </div>
@@ -81,13 +81,9 @@
 
     <hr class="my-5">
 
-    {{#with feedbackBlock}}
-    <section class="col-12">
-
-    </section>
-
-
-    {{/with}}
+    {{#each reviewList}}
+    {{> reviewItem }}
+    {{/each}}
 
 
     {{!-- gren block service--}}
