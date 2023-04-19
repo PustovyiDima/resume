@@ -98,19 +98,57 @@
         </div>
     </div>
     {{/with}}
-
+    {{#with contacts}}
     <div class="card col-12 p-3 mb-3">
         <h3 class="mb-3">{{title}}</h3>
         <div class=" row g-2">
-            {{#each contacts}}
             <div class="col-4  ">
                 <div class="card p-3">
-                    {{!-- Тут незнаю як його робить --}}
+                    <div class="mb-2">{{contactData.phone.title}}</div>
+                    <h5 class="mb-3">{{contactData.phone.value}}</h5>
+                    {{#with buttons.[0]}}
+                    <div>
+                        <a href={{link}}
+                            class="btn {{#if isPrimary}} btn-primary {{/if}} {{#if isSecondary}} btn-outline-secondary {{/if}} {{#if isDanger}} btn-outline-danger {{/if}}">{{text}}</a>
+
+                    </div>
+                    {{/with}}
                 </div>
             </div>
-            {{/each}}
+            <div class="col-4  ">
+                <div class="card p-3">
+                    <div class="mb-2">{{contactData.additionalPhone.title}}</div>
+                    <h5 class="mb-3">{{contactData.additionalPhone.value}}</h5>
+                    <div>
+                        {{#with buttons.[1]}}
+                        <div>
+                            <a href={{link}}
+                                class="btn {{#if isPrimary}} btn-primary {{/if}} {{#if isSecondary}} btn-outline-secondary {{/if}} {{#if isDanger}} btn-outline-danger {{/if}}">{{text}}</a>
+
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-4  ">
+                <div class="card p-3">
+                    <div class="mb-2">{{contactData.email.title}}</div>
+                    <h5 class="mb-3">{{contactData.email.value}}</h5>
+                    <div>
+                        {{#with buttons.[2]}}
+                        <div>
+                            <a href={{link}}
+                                class="btn {{#if isPrimary}} btn-primary {{/if}} {{#if isSecondary}} btn-outline-secondary {{/if}} {{#if isDanger}} btn-outline-danger {{/if}}">{{text}}</a>
+
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+    {{/with}}
     {{/with}}
     <hr>
     <section class="col-12">
