@@ -1,0 +1,88 @@
+<main class="row gy-4 gx-3">
+    {{> shop_header}}
+
+    {{> breadcrumb}}
+
+    <div class="row">
+        <h1 class="mb-3">{{header}}</h1>
+        {{#each sortBlock}}
+        <div class="col-3">
+            <select name="sort" class="form-select">
+                <option selected>{{placeholder}}</option>
+                {{#each options}}
+                <option value={{value}}>{{text}}</option>
+                {{/each}}
+            </select>
+        </div>
+        {{/each}}
+    </div>
+    {{#with filterBlock}}
+    <div class="col-4">
+        <div class="card p-2 ps-3">
+            <div class="mb-2">
+                {{sellers.title}}
+            </div>
+            {{#each sellers.list}}
+            <div class="form-check">
+                <label class="form-check-label">{{value}} </label>
+                <input name="selers" type="checkbox" class="form-check-input">
+            </div>
+            {{/each}}
+            <hr>
+            {{#with brands}}
+            <div class="mb-2">
+                <label for="" class="form-label mb-2">{{title}}</label>
+                <input type="text" class="form-control mb-2" placeholder={{placeholder}}>
+                {{#each options}}
+                <div class="form-check mb-2">
+                    <label for="" class="form-check-label">{{value}}</label>
+                    <input type="checkbox" name="brand" id="" class="form-check-input">
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+            <hr>
+            {{#with price}}
+            <div class="row g-2">
+                <label for="" class="form-label mb-2">{{title}}</label>
+                <input type="text" class="form-control mb-2" placeholder="{{range.from}}">
+                <input type="text" class="form-control mb-2" placeholder="{{range.to}}">
+                <div>
+                    <a href={{button.link}} class="btn btn-outline-secondary">{{button.text}}</a>
+                </div>
+            </div>
+            {{/with}}
+            <hr>
+            {{#each filterList}}
+            <div class="mb-2">
+                <label for="" class="form-label mb-2">{{title}}</label>
+                {{#each options}}
+                <div class="form-check mb-2">
+                    <label for="" class="form-check-label">{{value}}</label>
+                    <input type="checkbox" name="{{title}}" id="" class="form-check-input">
+                </div>
+                {{/each}}
+                {{#unless @last}}
+                <hr>
+                {{/unless}}
+            </div>
+
+            {{/each}}
+        </div>
+    </div>
+    {{/with}}
+
+    <div class="col-8">
+        <div class="row g-3">
+            {{#each goodsList}}
+            <div class="col-6">
+                {{> catalogitem}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    {{> shop_green_services}}
+    <hr>
+    {{> shop_footer}}
+</main>
