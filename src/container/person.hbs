@@ -1,4 +1,4 @@
-<div>
+<main class="row g-3">
     {{#with person}}
     <section>
         <h1>{{name}} ({{age}}) </h1>
@@ -8,111 +8,104 @@
         </address>
         {{/with}}
     </section>
-    <br>
     <hr>
-    <br>
-    <section>
-        <ul>
-        {{> title data="Educations: "  big=true }}
+    <section class="card">
+        <ul class="card-body">
+            {{> title data="Educations: " big=true }}
             {{#each education}}
             <li>
-                <div>{{degree}} <i>({{major}})</i> </div>
-                <div><b>{{university}}</b> ({{graduationYear}}) </div>
+                <div class="mb-2">{{degree}} <i>({{major}})</i> </div>
+                <div class="mb-2"><b>{{university}}</b> ({{graduationYear}}) </div>
             </li>
             {{/each}}
         </ul>
     </section>
-    <br>
     <hr>
-    <br>
-   <section>
-        <ul>
-        {{> title data="Work Experience: "  big=true }}
+    <section>
+        <ul class="list-group">
+            {{> title data="Work Experience: " big=true }}
             {{#each workExperience}}
-            <li>
-                <div>
-                <em>{{title}}</em>  in <b>{{company}}</b>  ({{startDate}} - {{#if endDate}}
-                     {{endDate}} {{else}} (Працюю зараз) {{/if}})
+            <li class="list-group-item">
+                <div class="mb-2">
+                    <em>{{title}}</em> in <b>{{company}}</b> ({{startDate}} - {{#if endDate}}
+                    {{endDate}} {{else}} (Працюю зараз) {{/if}})
                 </div>
-                <br>
-                <div><b>{{company}}</b> - <i>{{industry}} company founded in {{year_founded}} year</i></div>
-                <br>
+                <div class="mb-2"><b>{{company}}</b> - <i>{{industry}} company founded in {{year_founded}} year</i>
+                </div>
                 <p>
                     {{responsibilities}}
                 </p>
-                <br>
-                <br>
-                <ul>
-                {{> title data=" Employees: "  big=false }}
+                <ul class="list-group">
+                    {{> title data=" Employees: " big=false }}
                     {{#each employees}}
-                    <li>
-                        <div>{{name}} <b>({{position}})</b></div>
-                        <div>{{department}} department </div>
+                    <li class="list-group-item">
+                        <div class="mb-2">{{name}} <b>({{position}})</b></div>
+                        <div class="mb-2">{{department}} department </div>
 
-                        <ul>
-                           {{> title data=" Projects: "  big=false }}
-                           <br>
-                            {{#each projects}}            
-                            <li>
-                                <div>{{name}} ({{status}})</div>                                
+                        <ul class="list-group">
+                            {{> title data=" Projects: " big=false }}
+
+                            {{#each projects}}
+                            <li class="list-group-item">
+                                <div class="mb-2">{{name}} ({{status}})</div>
                                 <p>{{description}}</p>
 
-                                <ul>
-                                    {{> title data=" Teams: "  big=false }}
+                                <ul class="list-group">
+                                    {{> title data=" Teams: " big=false }}
                                     {{#each teams}}
-                                    <li>
-                                        <div><i>{{team_name}}</i></div>
-                                        <div>
-                                            <b>{{team_leader.name}}</b>: 
-                                                {{team_leader.title}}                                 
+                                    <li class="list-group-item">
+                                        <div class="mb-2"><i>{{team_name}}</i></div>
+                                        <div class="mb-2">
+                                            <b>{{team_leader.name}}</b>:
+                                            {{team_leader.title}}
                                         </div>
-                                        <p><em>{{team_leader.email}}</em></p>                                    
+                                        <p><em>{{team_leader.email}}</em></p>
 
 
-                                        <ul>
-                                            {{> title data=" Team members: "  big=false }}
+                                        <ul class="list-group">
+                                            {{> title data=" Team members: " big=false }}
                                             {{#each team_members}}
-                                            <li>
-                                                <div>
+                                            <li class="list-group-item">
+                                                <div class="mb-2">
                                                     {{name}} ({{title}})
                                                 </div>
                                                 <p><em>{{email}}</em></p>
 
-                                                <ul>
-                                                {{> title data=" Skills: "  big=false }}
+                                                <ul class="list-group">
+                                                    {{> title data=" Skills: " big=false }}
                                                     {{#each skills}}
-                                                    <li>{{this}}</li>
+                                                    <li class="list-group-item">{{this}}</li>
                                                     {{/each}}
                                                 </ul>
-                                                <br>                                                       
-                                                <ul>
-                                                    {{> title data=" Projects: "  big=false }}
-                                                    <br>
+
+                                                <ul class="list-group">
+                                                    {{> title data=" Projects: " big=false }}
+
                                                     {{#each projects}}
-                                                    <li>
-                                                       <div><b>{{name}}</b></div>
-                                                       <p>{{description}}</p>
-                                                       <ul>
-                                                        {{> title data=" Technologies: "  big=false }}
-                                                        {{#each technologies}}
-                                                        <li>
-                                                            {{this}}
-                                                        </li>
-                                                        {{/each}}
-                                                       </ul>
-                                                       <br>
-                                                       <ul>
-                                                        {{> title data=" Team members: "  big=false }}
-                                                        {{#each team_members}}
-                                                        <li>
-                                                            {{name}} - ({{title}})
-                                                        </li>
-                                                        {{/each}}
-                                                       </ul>                                                        
+                                                    <li class="list-group-item">
+                                                        <div class="mb-2"><b>{{name}}</b></div>
+                                                        <p>{{description}}</p>
+                                                        <ul class="list-group">
+                                                            {{> title data=" Technologies: " big=false }}
+                                                            {{#each technologies}}
+                                                            <li class="list-group-item">
+                                                                {{this}}
+                                                            </li>
+                                                            {{/each}}
+                                                        </ul>
+
+                                                        <ul class="list-group">
+                                                            {{> title data=" Team members: " big=false }}
+                                                            {{#each team_members}}
+                                                            <li class="list-group-item">
+                                                                {{name}} - ({{title}})
+                                                            </li>
+                                                            {{/each}}
+                                                        </ul>
                                                     </li>
                                                     {{/each}}
                                                 </ul>
-                                                <br>
+
 
                                             </li>
                                             {{/each}}
@@ -131,6 +124,5 @@
             {{/each}}
         </ul>
     </section>
-     {{/with}}
-</div>
-
+    {{/with}}
+</main>
