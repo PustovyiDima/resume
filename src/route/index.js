@@ -31,10 +31,7 @@ var nav_links = [
     name: 'bio',
     href: '/bio',
   },
-  {
-    name: 'bootstrap',
-    href: '/bootstrap',
-  },
+
   {
     name: 'car',
     href: '/car',
@@ -78,6 +75,30 @@ var nav_links = [
   {
     name: 'shophome',
     href: '/shophome',
+  },
+  {
+    name: 'shopproduct',
+    href: '/shopproduct',
+  },
+  {
+    name: 'shoporder',
+    href: '/shoporder',
+  },
+  {
+    name: 'shopcart',
+    href: '/shopcart',
+  },
+  {
+    name: 'shopprofile',
+    href: '/shopprofile',
+  },
+  {
+    name: 'shopreview',
+    href: '/shopreview',
+  },
+  {
+    name: 'shopcatalog',
+    href: '/shopcatalog',
   },
 ]
 // ================================================================
