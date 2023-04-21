@@ -28,77 +28,125 @@ var footer = {
 }
 var nav_links = [
   {
-    name: 'bio',
-    href: '/bio',
-  },
-
-  {
-    name: 'car',
-    href: '/car',
+    name: 'HOME',
+    href: '/',
+    class: 1,
   },
   {
-    name: 'facebook',
-    href: '/facebook',
+    name: 'summary',
+    href: '/summary',
+    class: 2,
   },
   {
-    name: 'js',
-    href: '/js',
+    name: 'education',
+    href: '/education',
+    class: 2,
   },
   {
-    name: 'mac',
-    href: '/mac',
+    name: 'skills',
+    href: '/skills',
+    class: 2,
+  },
+  {
+    name: 'work',
+    href: '/work',
+    class: 2,
   },
   {
     name: 'person',
     href: '/person',
+    class: 3,
+  },
+  {
+    name: 'bio',
+    href: '/bio',
+    class: 3,
   },
   {
     name: 'program',
     href: '/program',
-  },
-  {
-    name: 'task21',
-    href: '/task21',
-  },
-  {
-    name: 'task22',
-    href: '/task22',
-  },
-  {
-    name: 'task31',
-    href: '/task31',
+    class: 3,
   },
   {
     name: 'web',
     href: '/web',
+    class: 3,
   },
+  {
+    name: 'js',
+    href: '/js',
+    class: 4,
+  },
+  {
+    name: 'car',
+    href: '/car',
+    class: 4,
+  },
+  {
+    name: 'mac',
+    href: '/mac',
+    class: 4,
+  },
+  {
+    name: 'facebook',
+    href: '/facebook',
+    class: 4,
+  },
+  {
+    name: 'task21',
+    href: '/task21',
+    class: 5,
+  },
+  {
+    name: 'task22',
+    href: '/task22',
+    class: 5,
+  },
+  {
+    name: 'task31',
+    href: '/task31',
+    class: 5,
+  },
+
   {
     name: 'shophome',
     href: '/shophome',
+    class: 6,
   },
   {
     name: 'shopproduct',
     href: '/shopproduct',
+    class: 6,
   },
   {
     name: 'shoporder',
     href: '/shoporder',
+    class: 6,
   },
   {
     name: 'shopcart',
     href: '/shopcart',
+    class: 6,
   },
   {
     name: 'shopprofile',
     href: '/shopprofile',
+    class: 6,
   },
   {
     name: 'shopreview',
     href: '/shopreview',
+    class: 6,
   },
   {
     name: 'shopcatalog',
     href: '/shopcatalog',
+    class: 6,
+  },
+  {
+    name: 'index',
+    href: '/index',
+    class: 6,
   },
 ]
 // ================================================================
