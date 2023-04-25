@@ -1,13 +1,16 @@
-<div>
+<main class="row g-3">
     {{#with web}}
-    <main>
-        {{> title data="Languages" big=true }}
-        <br>
-        {{#each languages}}
-        <section>
+
+    {{> title data="Languages" big=true }}
+
+    {{#each languages}}
+    <section class="card">
+        <div class="card-header">
             {{> title data=name big=true }}
+        </div>
+        <div class="card-body">
             <div> <b>Version:</b> {{version}}</div>
-            <br>
+
             <div> <b>Description:</b> {{description}}</div>
 
             {{#if elements}}
@@ -17,7 +20,7 @@
                     {{#each elements}}
                     <li>
                         <div><b>{{name}}: </b> {{description}}</div>
-                        <br>
+
                         {{> inpList data=attributes}}
                     </li>
                     {{/each}}
@@ -32,7 +35,7 @@
                     {{#each properties}}
                     <li>
                         <div><b>{{name}}: </b> {{description}}</div>
-                        <br>
+
                         {{> inpList data=values}}
                     </li>
                     {{/each}}
@@ -46,16 +49,18 @@
                     {{#each functions}}
                     <li>
                         <div><b>{{name}}: </b> {{description}}</div>
-                        <br>
+
                         {{> inpList data=parameters}}
                     </li>
                     {{/each}}
                 </ul>
             </div>
             {{/if}}
-            <br>
-        </section>
-        {{/each}}
-    </main>
+
+        </div>
+
+    </section>
+    {{/each}}
+
     {{/with}}
-</div>
+</main>

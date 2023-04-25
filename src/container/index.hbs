@@ -1,5 +1,33 @@
-<div class="p-5">
-    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-    <button type="button" class="btn btn-primary">Купити</button>
-</div>
+<main class="row g-5">
+    <div class="col-12">
+        <h2>Список сторінок</h2>
+        <div>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque optio tempora, perferendis, a eum,
+            architecto
+            cupiditate dolore consectetur quo nesciunt neque! Accusantium sapiente nam temporibus quae autem, ex ipsam
+            laborum!"</div>
+    </div>
+    <div class="row g-2">
+        {{#each nav_links}}
+        <div class=" col-3
+        {{#if isMain}} col-12 {{/if}}
+        {{#if isFirst}} col-3 {{/if}} 
+        {{#if isSecond}} col-3 {{/if}}
+        {{#if isThird}} col-3 {{/if}}
+        {{#if isFourth}} col-4 {{/if}}
+        {{#if isBootstrap}} col-3 {{/if}} 
+        ">
+            {{!-- _____________________________ --}}
+            <a href={{href}} target="_blank" class=" col-12 btn
+    {{#if isMain}} btn-primary  {{/if}}
+    {{#if isFirst}} btn-secondary {{/if}}
+    {{#if isSecond}} btn-success {{/if}}
+    {{#if isThird}} btn-outline-info text-dark {{/if}}
+    {{#if isFourth}} btn-outline-danger  {{/if}}
+    {{#if isBootstrap}} btn-warning {{/if}}">
+                {{name}}
+            </a>
+        </div>
+        {{/each}}
+    </div>
+    <hr class="my-3">
+</main>

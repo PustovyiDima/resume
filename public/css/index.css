@@ -1,5 +1,5 @@
 html {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -7,14 +7,4 @@ body {
   margin: auto;
   background: #fff;
 }
-/* 
-main,
-header,
-footer,
-nav {
-  margin: 32px;
-}
 
-section {
-  padding: 16px;
-} */

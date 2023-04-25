@@ -2,9 +2,15 @@
 <div class="card mb-4">
     <section class=" nav ">
         {{#each links}}
+        {{#if href}}
         <div class="nav-item ">
             <a href={{href}} class="nav-link  {{#if @last}} disabled {{/if}}"> {{text}} </a>
         </div>
+        {{else}}
+        <div class="nav-item ">
+            <a href="#" class="nav-link  {{#if @last}} disabled {{/if}}"> {{text}} </a>
+        </div>
+        {{/if}}
         {{/each}}
     </section>
 </div>

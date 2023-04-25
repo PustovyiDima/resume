@@ -1,6 +1,6 @@
-<main>
+<main class="row g-4">
     {{> title data=name big=true}}
-    <br>
+
     <div>
         <p>{{description}}</p>
     </div>
@@ -8,9 +8,9 @@
         <h3>History:</h3>
         <p>Founded by {{history.founder}} in {{history.year}} year</p>
     </div>
-    <br>
+
     <hr>
-    <br>
+
     <div>
         {{> title data="Types:" big=false}}
         <ul>
@@ -20,9 +20,9 @@
         </ul>
 
     </div>
-    <br>
+
     <hr>
-    <br>
+
     <div>
         {{> title data="Syntax:" big=false}}
         {{#with syntax}}
@@ -72,8 +72,8 @@
         </ul>
         {{/with}}
     </div>
-    <br>
-    <hr><br>
+
+    <hr>
     <div>
         {{> title data="Features: " big=false}}
         <ul>
@@ -82,8 +82,8 @@
             {{/each}}
         </ul>
     </div>
-    <br>
-    <hr><br>
+
+    <hr>
     <div>
         {{> title data="Libraries:" big=false}}
         <ul>
@@ -92,8 +92,8 @@
             {{/each}}
         </ul>
     </div>
-    <br>
-    <hr><br>
+
+    <hr>
     <div>
         {{> title data="Tools:" big=false}}
         <ul>
@@ -102,8 +102,8 @@
             {{/each}}
         </ul>
     </div>
-    <br>
-    <hr><br>
+
+    <hr>
     <div>
         {{> title data="community:" big=false}}
         <ul>
@@ -111,10 +111,8 @@
             <li>
                 <button type="button" class="btn btn-light">
                     <a href="/">{{name}} ({{type}})</a>
-                </button>               
-
+                </button>
             </li>
-            <br>
             {{/each}}
         </ul>
     </div>

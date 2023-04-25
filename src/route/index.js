@@ -30,123 +30,233 @@ var nav_links = [
   {
     name: 'HOME',
     href: '/',
-    class: 1,
+    isMain: true,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'summary',
     href: '/summary',
-    class: 2,
+    isMain: false,
+    isFirst: true,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'education',
     href: '/education',
-    class: 2,
+    isMain: false,
+    isFirst: true,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'skills',
     href: '/skills',
-    class: 2,
+    isMain: false,
+    isFirst: true,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'work',
     href: '/work',
-    class: 2,
+    isMain: false,
+    isFirst: true,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'person',
     href: '/person',
-    class: 3,
+    isMain: false,
+    isFirst: false,
+    isSecond: true,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'bio',
     href: '/bio',
-    class: 3,
+    isMain: false,
+    isFirst: false,
+    isSecond: true,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'program',
     href: '/program',
-    class: 3,
+    isMain: false,
+    isFirst: false,
+    isSecond: true,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'web',
     href: '/web',
-    class: 3,
+    isMain: false,
+    isFirst: false,
+    isSecond: true,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'js',
     href: '/js',
-    class: 4,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: true,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'car',
     href: '/car',
-    class: 4,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: true,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'mac',
     href: '/mac',
-    class: 4,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: true,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'facebook',
     href: '/facebook',
-    class: 4,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: true,
+    isFourth: false,
+    isBootstrap: false,
   },
   {
     name: 'task21',
     href: '/task21',
-    class: 5,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: true,
+    isBootstrap: false,
   },
   {
     name: 'task22',
     href: '/task22',
-    class: 5,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: true,
+    isBootstrap: false,
   },
   {
     name: 'task31',
     href: '/task31',
-    class: 5,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: true,
+    isBootstrap: false,
   },
 
   {
     name: 'shophome',
     href: '/shophome',
-    class: 6,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: true,
   },
   {
     name: 'shopproduct',
     href: '/shopproduct',
-    class: 6,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: true,
   },
   {
     name: 'shoporder',
     href: '/shoporder',
-    class: 6,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: true,
   },
   {
     name: 'shopcart',
     href: '/shopcart',
-    class: 6,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: true,
   },
   {
     name: 'shopprofile',
     href: '/shopprofile',
-    class: 6,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: true,
   },
   {
     name: 'shopreview',
     href: '/shopreview',
-    class: 6,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: true,
   },
   {
     name: 'shopcatalog',
     href: '/shopcatalog',
-    class: 6,
-  },
-  {
-    name: 'index',
-    href: '/index',
-    class: 6,
+    isMain: false,
+    isFirst: false,
+    isSecond: false,
+    isThird: false,
+    isFourth: false,
+    isBootstrap: true,
   },
 ]
 // ================================================================
@@ -154,11 +264,14 @@ var nav_links = [
 router.get('/', function (req, res) {
   res.render('index', {
     page: {
-      tittle: 'Resume | Summary',
+      tittle: 'Resume | Home',
     },
-    header,
-    main: {},
-    footer,
+    nav_links,
+    layout: 'index',
+    autor: {
+      firstname: 'Dmytro',
+      lastname: 'Pustovyi',
+    },
   })
 })
 
@@ -166,6 +279,7 @@ router.get('/', function (req, res) {
 
 router.get('/summary', function (req, res) {
   res.render('summary', {
+    layout: 'default',
     page: {
       tittle: 'Resume | Summary',
     },
@@ -758,9 +872,6 @@ router.get('/web', function (req, res) {
 })
 
 router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
     nav_links,
     layout: 'basic',
@@ -1849,9 +1960,6 @@ router.get('/shophome', function (req, res) {
 })
 
 router.get('/shoporder', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shoporder', {
     layout: 'shop',
     page: {
@@ -2427,11 +2535,11 @@ router.get('/shopproduct', function (req, res) {
 })
 
 router.get('/shopcart', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcart', {
     layout: 'shop',
+    page: {
+      tittle: 'Resume | Shop | Cart',
+    },
     navigation: {
       links: [
         {
@@ -2672,6 +2780,9 @@ router.get('/shopcart', function (req, res) {
 router.get('/shopprofile', function (req, res) {
   res.render('shopprofile', {
     layout: 'shop',
+    page: {
+      tittle: 'Resume | Shop | Profile',
+    },
     navigation: {
       links: [
         {
@@ -2959,11 +3070,11 @@ router.get('/shopprofile', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 router.get('/shopreview', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
     layout: 'shop',
+    page: {
+      tittle: 'Resume | Shop | Review',
+    },
     navigation: {
       links: [
         {
@@ -3246,6 +3357,9 @@ router.get('/shopreview', function (req, res) {
 router.get('/shopcatalog', function (req, res) {
   res.render('shopcatalog', {
     layout: 'shop',
+    page: {
+      tittle: 'Resume | Shop | Navigation',
+    },
     navigation: {
       links: [
         {

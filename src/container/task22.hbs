@@ -1,22 +1,22 @@
-<main>
+<main class="row g-3">
     <h1 class="text-center">{{page_header.title}}</h1>
-    <div class="text-center">
+    <div class="text-center ">
         <p>
             {{page_header.description}}
         </p>
     </div>
-    <br>
+
     {{#with section}}
     <div class="card">
         <div class="card-body">
             <div class="display-6 text-end">
                 {{about_us.title_list.main}}
             </div>
-            <br>
+
             <h2 class="text-end">
                 {{about_us.title_list.sub}}
             </h2>
-            <br>
+
             <div>
                 <button class="btn btn-outline-info">
                     {{about_us.button.text}}
@@ -25,21 +25,23 @@
         </div>
     </div>
 
-    <br>
+
     {{#with advantage}}
     <div class="card">
         <div class="card-body">
             <div class="display-5 text-secondary">{{title}}</div>
-            <br>
+
             {{#with efficiency}}
             <div class="card">
                 <div class="card-body">
                     <div class="display-4 text-secondary">{{title}}</div>
-                    <br>
+
                     <h6>{{sub_title}}</h6>
-                    <br>
-                    <div><p>{{description}}</p></div>
-                    <br>
+
+                    <div>
+                        <p>{{description}}</p>
+                    </div>
+
                     <div>
                         <button class="btn btn-outline-warning">
                             {{button}}
@@ -48,16 +50,18 @@
                 </div>
             </div>
             {{/with}}
-            <br>
+
             {{#with innovation}}
             <div class="card">
                 <div class="card-body">
                     <div class="display-4 text-center text-secondary">{{title}}</div>
-                    <br>
+
                     <h6 class="text-center">{{sub_title}}</h6>
-                    <br>
-                    <div><p class="text-center">{{description}}</p></div>
-                    <br>
+
+                    <div>
+                        <p class="text-center">{{description}}</p>
+                    </div>
+
                     <div>
                         <button class="btn btn-outline-warning">
                             {{button}}
@@ -66,16 +70,18 @@
                 </div>
             </div>
             {{/with}}
-            <br>
+
             {{#with collaboration}}
             <div class="card">
                 <div class="card-body">
                     <div class="display-4 text-end text-secondary">{{title}}</div>
-                    <br>
+
                     <h6 class="text-end">{{sub_title}}</h6>
-                    <br>
-                    <div><p class="text-end">{{description}}</p></div>
-                    <br>
+
+                    <div>
+                        <p class="text-end">{{description}}</p>
+                    </div>
+
                     <div>
                         <button class="btn btn-outline-warning">
                             {{button}}
@@ -87,24 +93,26 @@
         </div>
     </div>
     {{/with}}
-    <br>
+
     {{#with agreement}}
     <div class="card">
         <div class="card-body">
             <div class="display-5">
                 {{title}}
             </div>
-            <br>
+
             {{#with info}}
             <div class="card">
                 <div class="card-body">
                     <h5>{{sub_title}}</h5>
-                    <br>
+
                     {{#with detail}}
                     <div class="card">
                         <div class="card-body">
-                            <div><p>{{text}}</p></div>
-                            <br>
+                            <div>
+                                <p>{{text}}</p>
+                            </div>
+
                             <div>
                                 <button class="btn btn-success">{{button}}</button>
                             </div>
@@ -120,7 +128,7 @@
     {{/with}}
 </main>
 
-{{!-- 
+{{!--
 {{#with efficiency}}
 <div class="card">
     <div class="card-body">
@@ -128,5 +136,4 @@
     </div>
 </div>
 {{/with}}
-  --}}
-
+--}}
